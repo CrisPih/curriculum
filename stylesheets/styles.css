@@ -1,0 +1,245 @@
+/* ===== Tipografía y reset suave (selector universal) ===== */
+* {
+  box-sizing: border-box;
+  font-family: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Tahoma, Geneva, Verdana, sans-serif; /* Regla I */
+  margin: 0;
+  padding: 0;
+}
+
+/* ===== Tema profesional + retro ===== */
+:root{
+  --bg: #0f0f14;              /* fondo oscuro */
+  --panel: #171a22;           /* paneles */
+  --text: #e7e7ea;            /* texto base */
+  --muted: rgba(151,156,165,0.89); /* pedido de la rúbrica */
+  --primary: #7df9ff;         /* cian neón suave */
+  --accent:  #ff73d9;         /* magenta */
+  --line: #cedddd;            /* borde gris azulado claro */
+  --glow: rgba(235,234,234,0.6);
+}
+
+html, body{
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+/* ===== Layout base ===== */
+.site-header{
+  text-align: center;
+  padding: 2rem 1rem 1rem;
+}
+
+/* Título principal centrado y en negrita (Regla I) */
+.title{
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: .03em;
+  text-align: center;      /* pedido */
+  color: var(--primary);
+  text-shadow: 0 0 6px color-mix(in oklab, var(--primary) 60%, transparent);
+}
+
+/* Foto (selector por id, Regla II) */
+#photo{
+  width: 8vw;              /* pedido */
+  height: auto;            /* pedido */
+  border-radius: 50%;
+  border: 2px solid var(--accent);
+  margin: 1rem auto .25rem;
+  display: block;
+  box-shadow: 0 0 10px color-mix(in oklab, var(--accent) 40%, transparent);
+}
+
+.lead{ color: var(--muted); }
+
+/* ===== NAV: Flexbox (Reglas Flex) ===== */
+nav{
+  background: var(--panel);
+  position: sticky; top: 0; z-index: 10;
+  border-block: 1px solid #1f2330;
+}
+
+/* Hijo inmediato <ul> dentro de <nav> (selector hijo, Regla III) */
+nav > ul{
+  list-style: none;                 /* quita viñetas (pedido Regla III) */
+  display: flex;                    /* activa flexbox (pedido) */
+  justify-content: space-between;   /* distribuye espacio equitativamente (pedido) */
+  flex-direction: row;              /* fila (pedido) */
+  align-items: center;              /* centrado vertical (pedido) */
+  gap: 1rem;                        /* espacio entre hijos (pedido 1rem) */
+  padding: .75rem 1rem;
+  overflow-x: auto;
+}
+
+nav a{
+  color: var(--text);
+  text-decoration: none;
+  padding: .4rem .6rem;
+  border-radius: .5rem;
+}
+nav a:hover{ background: #23283a; }
+
+/* ===== Main: grid de dos columnas en pantallas grandes (diseño por columnas) ===== */
+main{
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+@media (min-width: 900px){
+  main{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* ===== Secciones: modelo de caja + efectos ===== */
+/* Selector por elemento <section> (Modelo de caja pedido) */
+section{
+  border: .2pt solid var(--line);           /* borde .2pt, sólido, color pedido */
+  margin: 4px 2px 8px;                      /* margen T 4px, L/R 2px, B 8px */
+  padding: 1.5% .8%;                        /* padding vertical 1.5%, horizontal .8% */
+  margin-bottom: 1.2rem;                    /* margen inferior 1.2 * font-size raíz aprox (pedido) */
+  border-radius: 5px;                        /* border radius pedido */
+  background: var(--panel);
+  box-shadow: 3px 3px 1px 0 var(--glow);     /* sombra: offset 3px/3px, blur 1px, sin spread (pedido) */
+}
+
+/* h2 como subtítulo (selector por clase, Regla II) */
+.subtitle{
+  color: var(--muted);           /* color pedido */
+  text-transform: uppercase;     /* mayúsculas (pedido) */
+  letter-spacing: .06em;
+  margin-bottom: .75rem;
+}
+
+/* Listas en 2 columnas (cumple “diseño por columnas”) */
+.cols-2{
+  columns: 2;
+  column-gap: 1.25rem;
+}
+
+/* Tabla sin bordes (semántica texto) */
+.clean-table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: .25rem;
+}
+.clean-table th,
+.clean-table td{
+  padding: .5rem .6rem;
+  text-align: left;
+  border: none; /* sin bordes */
+}
+.clean-table tr:nth-child(odd){ background: #1a1f2c; }
+
+/* Multimedia */
+.media{
+  margin-top: .75rem;
+}
+.media img{
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: .5rem;
+}
+.media iframe{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  border: none;
+  border-radius: .5rem;
+}
+.map-embed iframe{ aspect-ratio: 4 / 3; }
+
+/* Proyectos */
+.projects{
+  display: grid;
+  gap: .75rem;
+  list-style: decimal inside;
+}
+.projects article{
+  padding: .5rem .75rem;
+  background: #1a1f2c;
+  border-radius: .5rem;
+}
+.projects a{ color: var(--primary); }
+
+/* ===== Footer: selector descendiente p dentro de footer (Regla III) ===== */
+footer p{
+  text-align: right;    /* pedido */
+  font-style: italic;   /* pedido */
+  padding: 1rem;
+  color: var(--muted);
+}
+
+/* ===== Formularios: Grid (se pide sin contenedores) ===== */
+form{
+  display: grid;                 /* activa grid (pedido) */
+  grid-template-columns: 1fr;    /* 1 columna 1fr (pedido) */
+  row-gap: 1rem;                 /* espacio filas 1rem (pedido) */
+  column-gap: 1rem;              /* espacio columnas 1rem (pedido) */
+}
+
+/* Campos */
+input, select, textarea, button, fieldset{
+  background: #0f1320;
+  color: var(--text);
+  border: 1px solid #2a2f42;
+  border-radius: .5rem;
+  padding: .6rem .7rem;
+}
+fieldset{ border-color: #2a2f42; }
+legend{ padding: 0 .4rem; color: var(--muted); }
+button{
+  background: linear-gradient(180deg, var(--primary), #4ad3e4);
+  color: #001018;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+}
+button:hover{ filter: brightness(1.05); }
+
+/* ===== Referencias: Grid o Flex cambiando la clase en la sección ===== */
+/* Opción Grid */
+.refs-grid{
+  display: grid;
+  grid-template-columns: 1fr; /* subtítulo ocupa todo el ancho por defecto */
+  gap: 1rem;
+}
+.refs-grid > h2{
+  grid-column: 1 / -1; /* subtítulo a todo el ancho */
+}
+.refs-grid > article{
+  background: #1a1f2c;
+  border-radius: .5rem;
+  padding: .6rem .8rem;
+}
+
+/* Opción Flex (si cambias la clase a .refs-flex en el HTML) */
+.refs-flex{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.refs-flex > h2{ order: -1; }
+.refs-flex > article{
+  flex: 1 1 0;
+  background: #1a1f2c;
+  border-radius: .5rem;
+  padding: .6rem .8rem;
+}
+@media (min-width: 900px){
+  .refs-grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .refs-grid > h2{ grid-column: 1 / 4; }
+  .refs-flex{
+    flex-wrap: wrap;
+  }
+  .refs-flex > h2{
+    flex: 0 0 100%;
+  }
+  .refs-flex > article{
+    flex: 1 0 calc(33.333% - 1rem);
+  }
+}
