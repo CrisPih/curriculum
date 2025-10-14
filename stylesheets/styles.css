@@ -1,245 +1,179 @@
-/* ===== Tipografía y reset suave (selector universal) ===== */
+/* ======== Reset & fuentes ======== */
 * {
   box-sizing: border-box;
-  font-family: "Source Sans Pro", system-ui, -apple-system, Segoe UI, Tahoma, Geneva, Verdana, sans-serif; /* Regla I */
   margin: 0;
   padding: 0;
+  font-family: "Source Sans Pro", system-ui, sans-serif;
 }
 
-/* ===== Tema profesional + retro ===== */
-:root{
-  --bg: #0f0f14;              /* fondo oscuro */
-  --panel: #171a22;           /* paneles */
-  --text: #e7e7ea;            /* texto base */
-  --muted: rgba(151,156,165,0.89); /* pedido de la rúbrica */
-  --primary: #7df9ff;         /* cian neón suave */
-  --accent:  #ff73d9;         /* magenta */
-  --line: #cedddd;            /* borde gris azulado claro */
-  --glow: rgba(235,234,234,0.6);
-}
-
-html, body{
-  background: var(--bg);
-  color: var(--text);
+body {
+  background: #0d0f15;
+  color: #e6e6e6;
   line-height: 1.6;
 }
 
-/* ===== Layout base ===== */
-.site-header{
-  text-align: center;
-  padding: 2rem 1rem 1rem;
+/* ======== Secciones apiladas ======== */
+section {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 4rem 2rem;
+  border: none;
 }
 
-/* Título principal centrado y en negrita (Regla I) */
-.title{
+/* ======== Títulos ======== */
+h1 {
   font-family: "Ubuntu Mono", monospace;
-  font-weight: 700;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  letter-spacing: .03em;
-  text-align: center;      /* pedido */
-  color: var(--primary);
-  text-shadow: 0 0 6px color-mix(in oklab, var(--primary) 60%, transparent);
+  font-size: 3rem;
+  text-align: center;
+  color: #00f2ff;
+  margin-bottom: 1rem;
 }
 
-/* Foto (selector por id, Regla II) */
-#photo{
-  width: 8vw;              /* pedido */
-  height: auto;            /* pedido */
+h2 {
+  font-family: "Ubuntu Mono", monospace;
+  color: #b5b5b5;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* ======== HEADER ======== */
+header {
+  text-align: center;
+  padding: 5rem 2rem 2rem;
+}
+
+header img {
+  width: 160px;
+  height: 160px;
   border-radius: 50%;
-  border: 2px solid var(--accent);
-  margin: 1rem auto .25rem;
-  display: block;
-  box-shadow: 0 0 10px color-mix(in oklab, var(--accent) 40%, transparent);
+  border: 3px solid #00f2ff;
+  margin-bottom: 1rem;
 }
 
-.lead{ color: var(--muted); }
-
-/* ===== NAV: Flexbox (Reglas Flex) ===== */
-nav{
-  background: var(--panel);
-  position: sticky; top: 0; z-index: 10;
-  border-block: 1px solid #1f2330;
+header p {
+  color: #bdbdbd;
 }
 
-/* Hijo inmediato <ul> dentro de <nav> (selector hijo, Regla III) */
-nav > ul{
-  list-style: none;                 /* quita viñetas (pedido Regla III) */
-  display: flex;                    /* activa flexbox (pedido) */
-  justify-content: space-between;   /* distribuye espacio equitativamente (pedido) */
-  flex-direction: row;              /* fila (pedido) */
-  align-items: center;              /* centrado vertical (pedido) */
-  gap: 1rem;                        /* espacio entre hijos (pedido 1rem) */
-  padding: .75rem 1rem;
-  overflow-x: auto;
+/* ======== NAV simple centrado ======== */
+nav {
+  background: #12141c;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
 }
 
-nav a{
-  color: var(--text);
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  list-style: none;
+}
+
+nav a {
+  color: #e6e6e6;
   text-decoration: none;
-  padding: .4rem .6rem;
-  border-radius: .5rem;
+  font-weight: 600;
 }
-nav a:hover{ background: #23283a; }
 
-/* ===== Main: grid de dos columnas en pantallas grandes (diseño por columnas) ===== */
-main{
+nav a:hover {
+  color: #00f2ff;
+}
+
+/* ======== HABILIDADES ======== */
+#habilidades ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: .5rem;
+  list-style: none;
+}
+
+#habilidades li {
+  background: #161922;
+  padding: .8rem 1rem;
+  border-radius: .5rem;
+  text-align: center;
+}
+
+/* ======== CARRUSEL DE PROYECTOS ======== */
+#proyectos {
+  text-align: center;
+}
+
+.carrusel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 1rem;
+  padding-bottom: 1rem;
+}
+
+.carrusel article {
+  flex: 0 0 80%;
+  scroll-snap-align: center;
+  background: #171b27;
+  border-radius: 1rem;
+  padding: 2rem;
+  transition: transform .3s;
+}
+
+.carrusel article:hover {
+  transform: scale(1.02);
+}
+
+.carrusel h3 {
+  color: #00f2ff;
+  margin-bottom: .5rem;
+}
+
+/* ======== MAPA ======== */
+#mapa iframe {
+  width: 100%;
+  aspect-ratio: 16/9;
+  border: none;
+  border-radius: .75rem;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+}
+
+/* ======== FORMULARIO ======== */
+#contacto form {
   display: grid;
   gap: 1rem;
-  padding: 1rem;
-}
-@media (min-width: 900px){
-  main{
-    grid-template-columns: 1fr 1fr;
-  }
 }
 
-/* ===== Secciones: modelo de caja + efectos ===== */
-/* Selector por elemento <section> (Modelo de caja pedido) */
-section{
-  border: .2pt solid var(--line);           /* borde .2pt, sólido, color pedido */
-  margin: 4px 2px 8px;                      /* margen T 4px, L/R 2px, B 8px */
-  padding: 1.5% .8%;                        /* padding vertical 1.5%, horizontal .8% */
-  margin-bottom: 1.2rem;                    /* margen inferior 1.2 * font-size raíz aprox (pedido) */
-  border-radius: 5px;                        /* border radius pedido */
-  background: var(--panel);
-  box-shadow: 3px 3px 1px 0 var(--glow);     /* sombra: offset 3px/3px, blur 1px, sin spread (pedido) */
-}
-
-/* h2 como subtítulo (selector por clase, Regla II) */
-.subtitle{
-  color: var(--muted);           /* color pedido */
-  text-transform: uppercase;     /* mayúsculas (pedido) */
-  letter-spacing: .06em;
-  margin-bottom: .75rem;
-}
-
-/* Listas en 2 columnas (cumple “diseño por columnas”) */
-.cols-2{
-  columns: 2;
-  column-gap: 1.25rem;
-}
-
-/* Tabla sin bordes (semántica texto) */
-.clean-table{
+#contacto input,
+#contacto select,
+#contacto textarea {
   width: 100%;
-  border-collapse: collapse;
-  margin-top: .25rem;
-}
-.clean-table th,
-.clean-table td{
-  padding: .5rem .6rem;
-  text-align: left;
-  border: none; /* sin bordes */
-}
-.clean-table tr:nth-child(odd){ background: #1a1f2c; }
-
-/* Multimedia */
-.media{
-  margin-top: .75rem;
-}
-.media img{
-  width: 100%;
-  height: auto;
-  display: block;
-  border-radius: .5rem;
-}
-.media iframe{
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  padding: .8rem;
   border: none;
   border-radius: .5rem;
-}
-.map-embed iframe{ aspect-ratio: 4 / 3; }
-
-/* Proyectos */
-.projects{
-  display: grid;
-  gap: .75rem;
-  list-style: decimal inside;
-}
-.projects article{
-  padding: .5rem .75rem;
-  background: #1a1f2c;
-  border-radius: .5rem;
-}
-.projects a{ color: var(--primary); }
-
-/* ===== Footer: selector descendiente p dentro de footer (Regla III) ===== */
-footer p{
-  text-align: right;    /* pedido */
-  font-style: italic;   /* pedido */
-  padding: 1rem;
-  color: var(--muted);
+  background: #1a1f2d;
+  color: #e6e6e6;
 }
 
-/* ===== Formularios: Grid (se pide sin contenedores) ===== */
-form{
-  display: grid;                 /* activa grid (pedido) */
-  grid-template-columns: 1fr;    /* 1 columna 1fr (pedido) */
-  row-gap: 1rem;                 /* espacio filas 1rem (pedido) */
-  column-gap: 1rem;              /* espacio columnas 1rem (pedido) */
-}
-
-/* Campos */
-input, select, textarea, button, fieldset{
-  background: #0f1320;
-  color: var(--text);
-  border: 1px solid #2a2f42;
-  border-radius: .5rem;
-  padding: .6rem .7rem;
-}
-fieldset{ border-color: #2a2f42; }
-legend{ padding: 0 .4rem; color: var(--muted); }
-button{
-  background: linear-gradient(180deg, var(--primary), #4ad3e4);
-  color: #001018;
+#contacto button {
+  background: #00f2ff;
+  color: #000;
   font-weight: 700;
   border: none;
+  padding: .8rem;
+  border-radius: .5rem;
   cursor: pointer;
-}
-button:hover{ filter: brightness(1.05); }
-
-/* ===== Referencias: Grid o Flex cambiando la clase en la sección ===== */
-/* Opción Grid */
-.refs-grid{
-  display: grid;
-  grid-template-columns: 1fr; /* subtítulo ocupa todo el ancho por defecto */
-  gap: 1rem;
-}
-.refs-grid > h2{
-  grid-column: 1 / -1; /* subtítulo a todo el ancho */
-}
-.refs-grid > article{
-  background: #1a1f2c;
-  border-radius: .5rem;
-  padding: .6rem .8rem;
+  transition: .2s;
 }
 
-/* Opción Flex (si cambias la clase a .refs-flex en el HTML) */
-.refs-flex{
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
+#contacto button:hover {
+  background: #0ff;
+  transform: scale(1.03);
 }
-.refs-flex > h2{ order: -1; }
-.refs-flex > article{
-  flex: 1 1 0;
-  background: #1a1f2c;
-  border-radius: .5rem;
-  padding: .6rem .8rem;
-}
-@media (min-width: 900px){
-  .refs-grid{
-    grid-template-columns: repeat(3, 1fr);
-  }
-  .refs-grid > h2{ grid-column: 1 / 4; }
-  .refs-flex{
-    flex-wrap: wrap;
-  }
-  .refs-flex > h2{
-    flex: 0 0 100%;
-  }
-  .refs-flex > article{
-    flex: 1 0 calc(33.333% - 1rem);
-  }
+
+/* ======== FOOTER ======== */
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: #999;
+  font-style: italic;
+  background: #12141c;
 }

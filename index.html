@@ -1,252 +1,205 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Currículum Vitae - Cristina Pihuave</title>
-
-  <!-- Google Fonts: Ubuntu Mono (títulos) + Source Sans Pro (texto) -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&family=Ubuntu+Mono:wght@700&display=swap"
-    rel="stylesheet">
-
-  <!-- Hoja de estilos en la carpeta solicitada -->
-  <link rel="stylesheet" href="stylesheets/styles.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV – Cristina Pihuave</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
-
 <body>
   <header class="site-header">
-    <h1 class="title">Cristina Pihuave</h1>
-
-    <!-- Imagen con id="photo" (Reglas CSS-II) -->
-    <img id="photo" src="https://placehold.co/600x600?text=FOTO+CV" alt="Foto de Cristina Pihuave" width="200"
-      height="200" />
-
-    <p class="lead">
-      <em>Estudiante de Ciencias de la Computación</em> ·
-      <a href="mailto:cristinapihuave810@gmail.com">cristinapihuave810@gmail.com</a> ·
-      Guayaquil, Ecuador
-    </p>
+    <div class="container header-inner">
+      <div class="avatar">
+        <img src="https://placehold.co/200x200?text=FOTO" alt="Foto de Cristina Pihuave" />
+      </div>
+      <div>
+        <h1>Cristina Pihuave</h1>
+        <p class="subtitle">Estudiante de Ciencias de la Computación</p>
+        <ul class="contact">
+          <li><a href="mailto:cristinapihuave810@gmail.com">cristinapihuave810@gmail.com</a></li>
+          <li>Guayaquil, Ecuador</li>
+          <li><a href="#" target="_blank" rel="noreferrer">LinkedIn</a> · <a href="#" target="_blank" rel="noreferrer">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
   </header>
 
-  <nav aria-label="Navegación principal">
-    <ul>
-      <li><a href="#resumen">Resumen</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#intereses">Intereses</a></li>
-      <li><a href="#idiomas">Idiomas</a></li>
-      <li><a href="#tabla">Conocimientos</a></li>
-      <li><a href="#referencias">Referencias</a></li>
-      <li><a href="#multimedia">Multimedia</a></li>
-      <li><a href="#mapa">Mapa</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <section id="resumen">
-      <h2 class="subtitle">Resumen</h2>
-      <p>
-        Soy <strong>Cristina Pihuave</strong>, estudiante de
-        <mark>Ciencias de la Computación</mark> en la ESPOL. Me apasiona el
-        <b>diseño UI/UX</b> y la <i>interacción humano–computador</i>.
-        He desarrollado proyectos hardware/software para bienestar y experiencia de usuario.
-        Conóceme en mi
-        <a href="https://github.com/CrisPih" target="_blank" rel="noopener">perfil de GitHub</a>.
-      </p>
-    </section>
-
-    <section id="habilidades">
-      <h2 class="subtitle">Habilidades</h2>
-
-      <h3>Lenguajes de Programación</h3>
-      <ul class="cols-2">
-        <li>C / C++</li>
-        <li>Java</li>
-        <li>Python</li>
-        <li>Dart</li>
-      </ul>
-
-      <h3>Frameworks y Herramientas</h3>
-      <ul class="cols-2">
-        <li>Flutter</li>
-        <li>Arduino / ESP32</li>
-        <li>MySQL</li>
-        <li>Figma</li>
-      </ul>
-    </section>
-
-    <section id="proyectos">
-      <h2 class="subtitle">Proyectos Destacados</h2>
-      <ol class="projects">
-        <li>
-          <article>
-            <h3><a href="https://github.com/CrisPih/PulseraApp" target="_blank" rel="noopener">PulseraApp</a></h3>
-            <p>App Flutter + ESP32 que simula pulsera inteligente con ritmo cardiaco en tiempo real.</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3><a href="https://github.com/Sebhvarg/TicTacToe" target="_blank" rel="noopener">TicTacToe</a></h3>
-            <p>Tres en Raya con IA simple (búsqueda y heurísticas) para optimizar jugadas.</p>
-          </article>
-        </li>
-        <li>
-          <article>
-            <h3><a href="https://github.com/gasaesco/HotelPuertoCayo" target="_blank" rel="noopener">Hotel Puerto
-                Cayo</a></h3>
-            <p>Sistema de reservas con módulos de registro, consulta y facturación en BD relacional.</p>
-          </article>
-        </li>
-      </ol>
-    </section>
-
-    <section id="intereses">
-      <h2 class="subtitle">Intereses</h2>
-      <p>Me interesa especialmente:</p>
-      <ul>
-        <li>UI/UX e interacción humano–computador</li>
-        <li>IA aplicada a productos centrados en el usuario</li>
-        <li>Desarrollo móvil y web</li>
-      </ul>
-    </section>
-
-    <section id="idiomas">
-      <h2 class="subtitle">Idiomas</h2>
-      <!-- Tabla sin bordes (semántica: primera fila/columna en <th>) -->
-      <table class="clean-table">
-        <tr>
-          <th>Idioma</th>
-          <th>Nivel</th>
-          <th>Detalles</th>
-        </tr>
-        <tr>
-          <th>Español</th>
-          <td>Nativo</td>
-          <td>Lengua materna</td>
-        </tr>
-        <tr>
-          <th>Inglés</th>
-          <td>Avanzado (C1)</td>
-          <td>Competencia profesional completa</td>
-        </tr>
-      </table>
-    </section>
-
-    <section id="tabla">
-      <h2 class="subtitle">Conocimientos Técnicos</h2>
-      <table class="clean-table">
-        <tr>
-          <th>Área</th>
-          <th>Nivel</th>
-          <th>Experiencia</th>
-        </tr>
-        <tr>
-          <th>Programación</th>
-          <td>Avanzado</td>
-          <td>Sistemas en C++, Java, Dart</td>
-        </tr>
-        <tr>
-          <th>Diseño</th>
-          <td>Intermedio</td>
-          <td>Prototipos UI/UX en Figma</td>
-        </tr>
-        <tr>
-          <th>Bases de Datos</th>
-          <td>Intermedio</td>
-          <td>Modelado y consultas en MySQL</td>
-        </tr>
-      </table>
-    </section>
-
-    <!-- Sección de referencias preparada para Grid o Flex -->
-    <section id="referencias" class="refs-grid" aria-labelledby="refs-heading">
-      <h2 id="refs-heading" class="subtitle">Referencias</h2>
-      <article>
-        <h3>María López</h3>
-        <p>Gerente de Producto — <a href="#">maria@example.com</a></p>
-      </article>
-      <article>
-        <h3>Carlos Pérez</h3>
-        <p>Director de Proyectos — <a href="#">carlos@example.com</a></p>
-      </article>
-      <article>
-        <h3>Lucía Herrera</h3>
-        <p>Supervisora de Desarrollo — <a href="#">lucia@example.com</a></p>
-      </article>
-    </section>
-
-    <section id="multimedia">
-      <h2 class="subtitle">Multimedia</h2>
-
-      <figure class="media">
-        <img src="https://picsum.photos/800/400" alt="Imagen de portafolio aleatoria de Picsum">
-        <figcaption>Imagen placeholder (Picsum).</figcaption>
-      </figure>
-
-      <div class="media">
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Video de presentación"
-          frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-          allowfullscreen></iframe>
+    <!-- INFO -->
+    <section class="section" id="info">
+      <div class="container">
+        <h2>Información</h2>
+        <p>
+          Soy desarrolladora en formación con interés en UX/UI, IA aplicada y desarrollo móvil.
+          Me gusta construir productos simples, accesibles y bien probados.
+        </p>
       </div>
     </section>
 
-    <section id="mapa">
-      <h2 class="subtitle">Ubicación</h2>
-      <!-- Google Maps embed centrado en Guayaquil con marcador -->
-      <div class="media map-embed">
-        <iframe src="https://www.google.com/maps?q=Guayaquil,Ecuador&hl=es;z=13&output=embed" title="Mapa de Guayaquil"
-          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+    <!-- HABILIDADES -->
+    <section class="section" id="habilidades">
+      <div class="container">
+        <h2>Habilidades</h2>
+
+        <div class="skills">
+          <div>
+            <h3>Lenguajes</h3>
+            <ul class="chips">
+              <li>Python</li><li>Java</li><li>C</li><li>Dart</li><li>C++</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Frontend</h3>
+            <ul class="chips">
+              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Flutter</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Backend / Otros</h3>
+            <ul class="chips">
+              <li>APIs REST</li><li>Git/GitHub</li><li>ESP32</li><li>MySQL</li>
+            </ul>
+          </div>
+          <div>
+            <h3>Intereses</h3>
+            <ul class="chips">
+              <li>IA</li><li>UX/UI</li><li>Apps móviles</li><li>Desarrollo Web</li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section id="contacto">
-      <h2 class="subtitle">Formulario de Contacto</h2>
-      <!-- Form sin contenedores div/span; Grid en CSS -->
-      <form action="#" method="post">
-        <label for="nombre">Nombre</label>
-        <input type="text" id="nombre" name="nombre" required autocomplete="name" />
+    <!-- PROYECTOS (CARRUSEL) -->
+    <section class="section" id="proyectos">
+      <div class="container">
+        <h2>Proyectos</h2>
 
-        <label for="asunto">Asunto</label>
-        <select id="asunto" name="asunto" required>
-          <option value="">Seleccione un asunto</option>
-          <option value="colaboracion">Colaboración</option>
-          <option value="proyecto">Proyecto</option>
-          <option value="consulta">Consulta</option>
-        </select>
+        <div class="carousel" data-index="0">
+          <button class="nav prev" aria-label="Anterior">‹</button>
+          <div class="track">
+            <!-- Slide 1 -->
+            <article class="slide">
+              <img src="https://placehold.co/800x400?text=HeartGuard+ESP32" alt="HeartGuard" />
+              <div class="slide-body">
+                <h3>HeartGuard (ESP32 + Flutter)</h3>
+                <p>Wearable con ESP32 y app Flutter para monitoreo de ritmo cardíaco y alertas.</p>
+                <a href="#" target="_blank" rel="noreferrer">Ver repositorio</a>
+              </div>
+            </article>
+            <!-- Slide 2 -->
+            <article class="slide">
+              <img src="https://placehold.co/800x400?text=Ponte+Pilas+GYE" alt="Ponte Pilas GYE" />
+              <div class="slide-body">
+                <h3>Ponte Pilas GYE</h3>
+                <p>Juego de mesa para reconectar a jóvenes con sitios culturales de Guayaquil.</p>
+                <a href="#" target="_blank" rel="noreferrer">Más info</a>
+              </div>
+            </article>
+            <!-- Slide 3 -->
+            <article class="slide">
+              <img src="https://placehold.co/800x400?text=Movie+Recommender" alt="Movie Recommender" />
+              <div class="slide-body">
+                <h3>Sistema Recomendador (MovieLens)</h3>
+                <p>Filtrado colaborativo con métricas de similitud y top-N recomendaciones.</p>
+                <a href="#" target="_blank" rel="noreferrer">Ver código</a>
+              </div>
+            </article>
+          </div>
+          <button class="nav next" aria-label="Siguiente">›</button>
+        </div>
+      </div>
+    </section>
 
-        <fieldset>
-          <legend>Género</legend>
-          <label><input type="radio" name="genero" value="femenino" required> Femenino</label>
-          <label><input type="radio" name="genero" value="masculino"> Masculino</label>
-          <label><input type="radio" name="genero" value="otro"> Otro</label>
-        </fieldset>
+    <!-- UBICACIÓN -->
+    <section class="section" id="ubicacion">
+      <div class="container">
+        <h2>Ubicación</h2>
+        <div class="map-wrap">
+          <iframe
+            title="Mapa Guayaquil"
+            src="https://www.google.com/maps?q=Guayaquil&output=embed"
+            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+          </iframe>
+        </div>
+      </div>
+    </section>
 
-        <label for="intereses">Intereses</label>
-        <select id="intereses" name="intereses[]" multiple size="4">
-          <option value="uiux">UI/UX</option>
-          <option value="ia">Inteligencia Artificial</option>
-          <option value="movil">Aplicaciones Móviles</option>
-          <option value="web">Desarrollo Web</option>
-        </select>
+    <!-- CONTACTO -->
+    <section class="section" id="contacto">
+      <div class="container">
+        <h2>Formulario de Contacto</h2>
+        <form class="form">
+          <div class="grid-2">
+            <label>Nombre<input type="text" placeholder="Tu nombre" required></label>
+            <label>Asunto
+              <select required>
+                <option value="">Selecciona un asunto</option>
+                <option>Colaboración</option><option>Consulta</option><option>Otro</option>
+              </select>
+            </label>
+          </div>
 
-        <label for="mensaje">Mensaje</label>
-        <textarea id="mensaje" name="mensaje" rows="5" required></textarea>
+          <fieldset class="inline">
+            <legend>Género</legend>
+            <label><input type="radio" name="gen" required> Femenino</label>
+            <label><input type="radio" name="gen"> Masculino</label>
+            <label><input type="radio" name="gen"> Otro</label>
+          </fieldset>
 
-        <button type="submit">Enviar</button>
-      </form>
+          <label>Intereses
+            <select multiple size="4">
+              <option>UI/UX</option><option>Inteligencia Artificial</option>
+              <option>Aplicaciones Móviles</option><option>Desarrollo Web</option>
+            </select>
+          </label>
+
+          <label>Mensaje
+            <textarea rows="6" placeholder="Escribe tu mensaje..."></textarea>
+          </label>
+
+          <button type="submit" class="btn">Enviar</button>
+        </form>
+      </div>
     </section>
   </main>
 
-  <footer>
-    <p>&copy; 2025 Cristina Pihuave. Todos los derechos reservados.</p>
+  <footer class="site-footer">
+    <div class="container">© 2025 Cristina Pihuave</div>
   </footer>
-</body>
 
+  <script>
+    // Carrusel simple
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(c => {
+      const track = c.querySelector('.track');
+      const slides = c.querySelectorAll('.slide');
+      const prev = c.querySelector('.prev');
+      const next = c.querySelector('.next');
+      let index = 0;
+
+      const update = () => {
+        track.style.transform = `translateX(-${index * 100}%)`;
+      };
+
+      prev.addEventListener('click', () => {
+        index = (index - 1 + slides.length) % slides.length;
+        update();
+      });
+      next.addEventListener('click', () => {
+        index = (index + 1) % slides.length;
+        update();
+      });
+
+      // swipe (móvil)
+      let startX = 0;
+      track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
+      track.addEventListener('touchend', e => {
+        const dx = e.changedTouches[0].clientX - startX;
+        if (dx > 40) prev.click();
+        if (dx < -40) next.click();
+      });
+    });
+  </script>
+</body>
 </html>
