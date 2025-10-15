@@ -141,8 +141,7 @@
           <!-- PulseraApp -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=PulseraApp+%7C+Flutter+%2B+ESP32"
-                alt="PulseraApp">
+              <img src="Imagenpulsera.png" alt="PulseraApp">
             </figure>
             <div class="project-body">
               <h3 class="project-title"> PulseraApp</h3>
@@ -159,7 +158,7 @@
           <!-- TicTacToe -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="Imagen3.png" alt="TicTacToe">
+              <img src="Imagen4.png" alt="TicTacToe">
             </figure>
             <div class="project-body">
               <h3 class="project-title"> TicTacToe</h3>
@@ -176,12 +175,13 @@
           <!-- Hotel Puerto Cayo -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="hotelcayo.png" alt="Hotel Puerto Cayo">
+              <img src="Imagen5.png" alt="Hotel Puerto Cayo">
             </figure>
             <div class="project-body">
               <h3 class="project-title"> Hotel Puerto Cayo</h3>
               <p class="project-desc">
-                Sistema de gestión de clientes y reservas con módulos de registro, consulta y facturación.
+                Sistema de gestión de hotel en el que se implementan módulos de registro, consulta de reservas y
+                habitaciones.
               </p>
               <p class="project-tech"><strong>Tecnologías:</strong> Python, MySQL, CSS</p>
               <a class="project-link" href="https://github.com/gasaesco/HotelPuertoCayo" target="_blank"
@@ -220,72 +220,76 @@
 
     <!-- CONTACTO (form) -->
     <section id="contacto" class="section">
-      <div class="container">
-        <h2>Contactame</h2>
-        <form class="form" action="#" method="post">
-          <div class="grid-2">
-            <label>Nombre y Apellido
-              <input type="text" name="nombre" placeholder="Tu nombre y Apellido" required autocomplete="name">
+      <div class="container contacto-grid">
+        <div class="form-wrap">
+          <h2>Contactame</h2>
+          <form class="form" action="#" method="post">
+            <div class="grid-2">
+              <label>Nombre y Apellido
+                <input type="text" name="nombre" placeholder="Tu nombre y Apellido" required autocomplete="name">
+              </label>
+              <label>Asunto
+                <select name="asunto" required>
+                  <option value="">Selecciona un asunto</option>
+                  <option>Colaboración</option>
+                  <option>Consulta</option>
+                  <option>Otro</option>
+                </select>
+              </label>
+            </div>
+
+            <fieldset class="inline">
+              <legend>Género</legend>
+              <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+              <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+              <label><input type="radio" name="genero" value="Otro"> Otro</label>
+            </fieldset>
+
+            <fieldset class="inline">
+              <legend>Intereses</legend>
+              <label><input type="checkbox" name="intereses[]" value="UI/UX"> UI/UX</label>
+              <label><input type="checkbox" name="intereses[]" value="Inteligencia Artificial"> Inteligencia
+                Artificial</label>
+              <label><input type="checkbox" name="intereses[]" value="Aplicaciones Móviles"> Aplicaciones
+                Móviles</label>
+              <label><input type="checkbox" name="intereses[]" value="Desarrollo Web"> Desarrollo Web</label>
+            </fieldset>
+
+            <label>Mensaje
+              <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
             </label>
-            <label>Asunto
-              <select name="asunto" required>
-                <option value="">Selecciona un asunto</option>
-                <option>Colaboración</option>
-                <option>Consulta</option>
-                <option>Otro</option>
-              </select>
-            </label>
-          </div>
 
-          <!-- Género: solo uno -->
-          <fieldset class="inline">
-            <legend>Género</legend>
-            <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
-            <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
-            <label><input type="radio" name="genero" value="Otro"> Otro</label>
-          </fieldset>
+            <button type="submit" class="btn">Enviar</button>
+          </form>
+        </div>
 
-          <!-- Intereses: varios posibles -->
-          <fieldset class="inline">
-            <legend>Intereses</legend>
-            <label><input type="checkbox" name="intereses[]" value="UI/UX"> UI/UX</label>
-            <label><input type="checkbox" name="intereses[]" value="Inteligencia Artificial"> Inteligencia
-              Artificial</label>
-            <label><input type="checkbox" name="intereses[]" value="Aplicaciones Móviles"> Aplicaciones Móviles</label>
-            <label><input type="checkbox" name="intereses[]" value="Desarrollo Web"> Desarrollo Web</label>
-          </fieldset>
-
-
-          <label>Mensaje
-            <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
-          </label>
-
-          <button type="submit" class="btn">Enviar</button>
-        </form>
+        <div class="contacto-img">
+          <img src="Imagen8.png" alt="Decoración contacto">
+        </div>
       </div>
     </section>
-  </main>
 
-  <!-- FOOTER con badges -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <div class="badges">
-        <a href="https://www.linkedin.com/in/cristina-pihuave-0ab060278" target="_blank" rel="noopener">
-          <img alt="LinkedIn"
-            src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
-        </a>
-        <a href="mailto:cristinapihuave810@gmail.com">
-          <img alt="Gmail"
-            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
-        </a>
-        <a href="https://github.com/CrisPih" target="_blank" rel="noopener">
-          <img alt="GitHub"
-            src="https://img.shields.io/badge/GitHub-16161a?style=for-the-badge&logo=github&logoColor=white">
-        </a>
+
+    <!-- FOOTER con badges -->
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="badges">
+          <a href="https://www.linkedin.com/in/cristina-pihuave-0ab060278" target="_blank" rel="noopener">
+            <img alt="LinkedIn"
+              src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+          </a>
+          <a href="mailto:cristinapihuave810@gmail.com">
+            <img alt="Gmail"
+              src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+          </a>
+          <a href="https://github.com/CrisPih" target="_blank" rel="noopener">
+            <img alt="GitHub"
+              src="https://img.shields.io/badge/GitHub-16161a?style=for-the-badge&logo=github&logoColor=white">
+          </a>
+        </div>
+        <p>© 2025 Cristina Pihuave</p>
       </div>
-      <p>© 2025 Cristina Pihuave</p>
-    </div>
-  </footer>
+    </footer>
 </body>
 
 </html>
