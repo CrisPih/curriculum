@@ -1,205 +1,179 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CV – Cristina Pihuave</title>
-  <link rel="stylesheet" href="styles.css" />
-</head>
-<body>
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="avatar">
-        <img src="https://placehold.co/200x200?text=FOTO" alt="Foto de Cristina Pihuave" />
-      </div>
-      <div>
-        <h1>Cristina Pihuave</h1>
-        <p class="subtitle">Estudiante de Ciencias de la Computación</p>
-        <ul class="contact">
-          <li><a href="mailto:cristinapihuave810@gmail.com">cristinapihuave810@gmail.com</a></li>
-          <li>Guayaquil, Ecuador</li>
-          <li><a href="#" target="_blank" rel="noreferrer">LinkedIn</a> · <a href="#" target="_blank" rel="noreferrer">GitHub</a></li>
-        </ul>
-      </div>
-    </div>
-  </header>
+/* ========== Reset + Tipografía base (selector universal) ========== */
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Source Sans Pro", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+html, body{ height: 100%; }
+body{
+  background:#0d0f15; color:#e6e6e6; line-height:1.6;
+}
 
-  <main>
-    <!-- INFO -->
-    <section class="section" id="info">
-      <div class="container">
-        <h2>Información</h2>
-        <p>
-          Soy desarrolladora en formación con interés en UX/UI, IA aplicada y desarrollo móvil.
-          Me gusta construir productos simples, accesibles y bien probados.
-        </p>
-      </div>
-    </section>
+/* ========== Tokens de color ========== */
+:root{
+  --bg:#0d0f15;
+  --panel:#141826;
+  --text:#e6e6e6;
+  --muted:#bdbdbd;
+  --c1:#6c63ff;  /* morado retro */
+  --c2:#00d4ff;  /* cian retro  */
+  --link:#00f2ff;
+}
 
-    <!-- HABILIDADES -->
-    <section class="section" id="habilidades">
-      <div class="container">
-        <h2>Habilidades</h2>
+/* ========== Header con look retro ========== */
+.site-header{
+  background: linear-gradient(90deg, var(--c1), var(--c2));
+  color:#000;
+}
+.container{ width:min(1100px, 90%); margin-inline:auto; }
+.header-inner{ display:flex; gap:1.5rem; align-items:center; padding:2.5rem 0 1.5rem; }
+.avatar img{
+  width:160px; height:160px; border-radius:50%;
+  border:3px solid #00000033; display:block;
+}
+h1{
+  font-family:"Press Start 2P", monospace;
+  font-size:clamp(1.6rem, 2.5vw, 2rem);
+  line-height:1.2; color:#06121a; margin-bottom:.35rem;
+}
+.subtitle{ color:#06202a; font-weight:700; margin-bottom:.35rem; }
+.contact{ list-style:none; display:flex; flex-wrap:wrap; gap:.75rem; }
+.contact a{ color:#06121a; text-decoration:none; border-bottom:1px solid #06121a55; }
+.contact a:hover{ border-bottom-color:#06121a; }
 
-        <div class="skills">
-          <div>
-            <h3>Lenguajes</h3>
-            <ul class="chips">
-              <li>Python</li><li>Java</li><li>C</li><li>Dart</li><li>C++</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Frontend</h3>
-            <ul class="chips">
-              <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Flutter</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Backend / Otros</h3>
-            <ul class="chips">
-              <li>APIs REST</li><li>Git/GitHub</li><li>ESP32</li><li>MySQL</li>
-            </ul>
-          </div>
-          <div>
-            <h3>Intereses</h3>
-            <ul class="chips">
-              <li>IA</li><li>UX/UI</li><li>Apps móviles</li><li>Desarrollo Web</li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+/* ========== NAV: flex + sin viñetas (hijo inmediato nav > ul) ========== */
+nav{ background:#12141c; position:sticky; top:0; z-index:10; }
+nav > ul{
+  display:flex; justify-content:center; align-items:center; gap:1rem;
+  list-style:none; padding:.75rem 1rem;
+}
+nav a{ color:var(--text); text-decoration:none; font-weight:600; }
+nav a:hover{ color:var(--link); }
 
-    <!-- PROYECTOS (CARRUSEL) -->
-    <section class="section" id="proyectos">
-      <div class="container">
-        <h2>Proyectos</h2>
+/* ========== Secciones apiladas ========= */
+.section{ padding:4rem 0; }
+.section h2{
+  font-family:"Press Start 2P", monospace;
+  color:var(--c2); text-transform:uppercase; letter-spacing:1px;
+  margin-bottom:1rem; font-size:clamp(1rem, 2vw, 1.1rem);
+}
+.section p{ color:var(--text); }
 
-        <div class="carousel" data-index="0">
-          <button class="nav prev" aria-label="Anterior">‹</button>
-          <div class="track">
-            <!-- Slide 1 -->
-            <article class="slide">
-              <img src="https://placehold.co/800x400?text=HeartGuard+ESP32" alt="HeartGuard" />
-              <div class="slide-body">
-                <h3>HeartGuard (ESP32 + Flutter)</h3>
-                <p>Wearable con ESP32 y app Flutter para monitoreo de ritmo cardíaco y alertas.</p>
-                <a href="#" target="_blank" rel="noreferrer">Ver repositorio</a>
-              </div>
-            </article>
-            <!-- Slide 2 -->
-            <article class="slide">
-              <img src="https://placehold.co/800x400?text=Ponte+Pilas+GYE" alt="Ponte Pilas GYE" />
-              <div class="slide-body">
-                <h3>Ponte Pilas GYE</h3>
-                <p>Juego de mesa para reconectar a jóvenes con sitios culturales de Guayaquil.</p>
-                <a href="#" target="_blank" rel="noreferrer">Más info</a>
-              </div>
-            </article>
-            <!-- Slide 3 -->
-            <article class="slide">
-              <img src="https://placehold.co/800x400?text=Movie+Recommender" alt="Movie Recommender" />
-              <div class="slide-body">
-                <h3>Sistema Recomendador (MovieLens)</h3>
-                <p>Filtrado colaborativo con métricas de similitud y top-N recomendaciones.</p>
-                <a href="#" target="_blank" rel="noreferrer">Ver código</a>
-              </div>
-            </article>
-          </div>
-          <button class="nav next" aria-label="Siguiente">›</button>
-        </div>
-      </div>
-    </section>
+/* ========== Info ========= */
+#info .container{ max-width:900px; }
 
-    <!-- UBICACIÓN -->
-    <section class="section" id="ubicacion">
-      <div class="container">
-        <h2>Ubicación</h2>
-        <div class="map-wrap">
-          <iframe
-            title="Mapa Guayaquil"
-            src="https://www.google.com/maps?q=Guayaquil&output=embed"
-            loading="lazy" referrerpolicy="no-referrer-when-downgrade">
-          </iframe>
-        </div>
-      </div>
-    </section>
+/* ========== Habilidades (grid) ========= */
+.skills{
+  display:grid; gap:1.25rem;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  margin-top:.5rem;
+}
+.skills h3{ color:#b5b5b5; margin-bottom:.35rem; font-weight:700; }
+.chips{ list-style:none; display:flex; flex-wrap:wrap; gap:.5rem; }
+.chips li{
+  background:#161922; border:1px solid #1f2540;
+  padding:.5rem .7rem; border-radius:999px; font-weight:600;
+}
 
-    <!-- CONTACTO -->
-    <section class="section" id="contacto">
-      <div class="container">
-        <h2>Formulario de Contacto</h2>
-        <form class="form">
-          <div class="grid-2">
-            <label>Nombre<input type="text" placeholder="Tu nombre" required></label>
-            <label>Asunto
-              <select required>
-                <option value="">Selecciona un asunto</option>
-                <option>Colaboración</option><option>Consulta</option><option>Otro</option>
-              </select>
-            </label>
-          </div>
+/* ========== Intereses (ul) ========= */
+#intereses{
+  background: linear-gradient(180deg, #0e111d, #10131f);
+}
+.lista-intereses{
+  list-style: disc;
+  padding-left: 2rem;
+  line-height: 1.8;
+  color:#d8d8d8;
+}
+.lista-intereses li::marker{ color: var(--c2); }
 
-          <fieldset class="inline">
-            <legend>Género</legend>
-            <label><input type="radio" name="gen" required> Femenino</label>
-            <label><input type="radio" name="gen"> Masculino</label>
-            <label><input type="radio" name="gen"> Otro</label>
-          </fieldset>
+/* ========== Idiomas (ol) ========= */
+#idiomas{
+  background:#0c0f19;
+  border-top:1px solid #1d2236;
+}
+.lista-idiomas{
+  list-style: decimal;
+  padding-left: 2rem;
+  line-height: 1.8;
+  color:#d8d8d8;
+}
+.lista-idiomas li::marker{ color: var(--c1); font-weight:700; }
 
-          <label>Intereses
-            <select multiple size="4">
-              <option>UI/UX</option><option>Inteligencia Artificial</option>
-              <option>Aplicaciones Móviles</option><option>Desarrollo Web</option>
-            </select>
-          </label>
+/* ========== Proyectos – Carrusel ========= */
+#proyectos .container{ max-width:1000px; }
+.carousel{
+  position:relative; overflow:hidden; border-radius:1rem;
+  background:linear-gradient(180deg, #111522, #0e1220);
+  padding:1rem;
+}
+.carousel .track{
+  display:flex; transition:transform .4s ease; will-change:transform;
+}
+.carousel .slide{
+  min-width:100%; padding:0 .25rem;
+  display:grid; grid-template-columns:1fr; gap:.75rem;
+  align-items:start; justify-items:center;
+}
+.carousel .slide img{
+  width:100%; height:auto; border-radius:.75rem; border:1px solid #1f2745;
+}
+.slide-body{ width:100%; padding:.5rem 0 0; }
+.slide-body h3{ color:var(--link); margin-bottom:.25rem; }
+.slide-body p{ color:#cfd5ff; margin-bottom:.35rem; }
+.slide-body a{ color:var(--link); text-decoration:none; border-bottom:1px solid #00f2ff33; }
+.slide-body a:hover{ border-bottom-color:var(--link); }
 
-          <label>Mensaje
-            <textarea rows="6" placeholder="Escribe tu mensaje..."></textarea>
-          </label>
+/* Botones prev/next */
+.carousel .nav{
+  position:absolute; top:50%; transform:translateY(-50%);
+  width:42px; height:42px; border-radius:50%;
+  border:1px solid #2a3358; background:#0b0f1d;
+  color:#e6e6e6; cursor:pointer; font-size:1.4rem; line-height:1;
+  display:grid; place-items:center; transition:.2s;
+}
+.carousel .nav:hover{ background:#121833; }
+.carousel .prev{ left:8px; }
+.carousel .next{ right:8px; }
 
-          <button type="submit" class="btn">Enviar</button>
-        </form>
-      </div>
-    </section>
-  </main>
+/* ========== Multimedia ========= */
+.media{ margin-top:.9rem; }
+.media img{ display:block; width:100%; height:auto; border-radius:.75rem; }
+.media iframe{ width:100%; aspect-ratio:16/9; border:none; border-radius:.75rem; }
 
-  <footer class="site-footer">
-    <div class="container">© 2025 Cristina Pihuave</div>
-  </footer>
+/* ========== Mapa ========= */
+.map-wrap{ margin-top:.75rem; }
+#ubicacion iframe{
+  width:100%; aspect-ratio:16/9; border:none; border-radius:.75rem;
+  box-shadow: 0 0 20px rgba(0, 212, 255, .12);
+}
 
-  <script>
-    // Carrusel simple
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(c => {
-      const track = c.querySelector('.track');
-      const slides = c.querySelectorAll('.slide');
-      const prev = c.querySelector('.prev');
-      const next = c.querySelector('.next');
-      let index = 0;
+/* ========== Formulario (grid) ========= */
+.form{ display:grid; gap:1rem; max-width:900px; }
+.grid-2{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
+label{ display:grid; gap:.35rem; color:#b5b5b5; }
+input, select, textarea, .btn{
+  background:#1a1f2d; color:var(--text); border:1px solid #2a2f42;
+  border-radius:.6rem; padding:.8rem;
+}
+textarea{ resize:vertical; }
+.inline{
+  display:flex; flex-wrap:wrap; gap:.75rem;
+  border:1px solid #2a2f42; padding:.6rem .8rem; border-radius:.6rem;
+}
+.inline legend{ padding:0 .4rem; color:#9aa4c6; }
+.inline label{ display:flex; align-items:center; gap:.4rem; }
+.btn{
+  background:linear-gradient(180deg, var(--c2), #35e1ff);
+  color:#001016; font-weight:800; cursor:pointer; border:none;
+}
+.btn:hover{ filter:brightness(1.06); }
 
-      const update = () => {
-        track.style.transform = `translateX(-${index * 100}%)`;
-      };
-
-      prev.addEventListener('click', () => {
-        index = (index - 1 + slides.length) % slides.length;
-        update();
-      });
-      next.addEventListener('click', () => {
-        index = (index + 1) % slides.length;
-        update();
-      });
-
-      // swipe (móvil)
-      let startX = 0;
-      track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-      track.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - startX;
-        if (dx > 40) prev.click();
-        if (dx < -40) next.click();
-      });
-    });
-  </script>
-</body>
-</html>
+/* ========== Footer: descendiente p (derecha + itálica) ========= */
+.site-footer{ background:#12141c; }
+.site-footer .container{ padding:1.25rem 0; }
+.site-footer .container p,
+footer p{
+  text-align:right; font-style:italic; color:#999;
+}
