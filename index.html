@@ -1,73 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="Cristina Pihuave, CV, Computación, UI/UX, Programación" />
-  <meta name="description"
-    content="Currículum vitae de Cristina Pihuave: habilidades, proyectos, intereses, idiomas, multimedia, mapa y contacto." />
+  <meta name="description" content="Currículum vitae de Cristina Pihuave: habilidades, proyectos, intereses, idiomas, multimedia, mapa y contacto." />
   <meta name="author" content="Cristina Pihuave" />
   <title>CV – Cristina Pihuave</title>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:wght@400;600;700&display=swap"
-    rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="stylesheets/styles.css" />
 </head>
-
 <body>
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <div class="avatar">
-        <img id="photo" src="https://placehold.co/200x200?text=FOTO" alt="Foto de Cristina Pihuave" />
-      </div>
-      <div>
-        <h1>Cristina Pihuave</h1>
-        <p class="subtitle">Estudiante de Ciencias de la Computación</p>
-        <ul class="contact">
-          <li><a href="mailto:cristinapihuave810@gmail.com">cristinapihuave810@gmail.com</a></li>
-          <li>Guayaquil, Ecuador</li>
-          <li>
-            <a href="#" target="_blank" rel="noopener">LinkedIn</a> ·
-            <a href="https://github.com/CrisPih" target="_blank" rel="noopener">GitHub</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+
+  <!-- HEADER + NAV (degradado fijo) -->
+  <header class="topnav" aria-label="Barra superior">
+    <nav class="container nav-inner" aria-label="Navegación principal">
+      <ul>
+        <li><a href="#info">Información</a></li>
+        <li><a href="#habilidades">Habilidades</a></li>
+        <li><a href="#intereses">Intereses</a></li>
+        <li><a href="#idiomas">Idiomas</a></li>
+        <li><a href="#proyectos">Proyectos</a></li>
+        <li><a href="#multimedia">Multimedia</a></li>
+        <li><a href="#ubicacion">Mapa</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
   </header>
 
-  <!-- NAV -->
-  <nav aria-label="Navegación principal">
-    <ul>
-      <li><a href="#info">Información</a></li>
-      <li><a href="#habilidades">Habilidades</a></li>
-      <li><a href="#intereses">Intereses</a></li>
-      <li><a href="#idiomas">Idiomas</a></li>
-      <li><a href="#proyectos">Proyectos</a></li>
-      <li><a href="#multimedia">Multimedia</a></li>
-      <li><a href="#ubicacion">Mapa</a></li>
-      <li><a href="#contacto">Contacto</a></li>
-    </ul>
-  </nav>
-
   <main>
-    <!-- INFO -->
+    <!-- INFO (foto + nombre + texto) -->
     <section id="info" class="section">
-      <div class="container">
-        <h2>Información</h2>
-        <p>
-          Soy desarrolladora en formación con interés en <strong>UX/UI</strong>,
-          <strong>Inteligencia Artificial</strong> y <strong>Desarrollo Móvil</strong>.
-          Me gusta construir productos simples, accesibles y bien probados.
-          Más proyectos en <a href="https://github.com/CrisPih" target="_blank" rel="noopener">mi GitHub</a>.
-        </p>
+      <div class="container about">
+        <img id="photo" src="https://placehold.co/240x240?text=FOTO" alt="Foto de Cristina Pihuave" />
+
+        <div class="about-text">
+          <h1>Cristina Pihuave</h1>
+          <p class="subtitle">Estudiante de Ciencias de la Computación</p>
+
+          <p>
+            Soy desarrolladora en formación con enfoque en <strong>UX/UI</strong>, 
+            <strong>Inteligencia Artificial</strong> aplicada y <strong>Desarrollo Móvil</strong>.
+            Disfruto crear experiencias claras, accesibles y con alto estándar de calidad,
+            priorizando arquitectura limpia, pruebas y diseño centrado en las personas.
+          </p>
+          <p>
+            He trabajado en proyectos que combinan <em>hardware</em> y <em>software</em> (ESP32 + Flutter),
+            juegos con algoritmos de decisión, y sistemas de gestión con bases de datos. 
+            Me motiva colaborar en equipos donde pueda aportar tanto en la parte técnica como en la experiencia de usuario.
+            Visita <a href="https://github.com/CrisPih" target="_blank" rel="noopener">mi GitHub</a> para ver más.
+          </p>
+        </div>
       </div>
     </section>
 
@@ -79,34 +68,26 @@
           <div>
             <h3>Lenguajes</h3>
             <ul class="chips">
-              <li>Python</li>
-              <li>Java</li>
-              <li>Dart</li>
+              <li>Python</li><li>Java</li><li>Dart</li>
             </ul>
           </div>
-
           <div>
             <h3>Frontend</h3>
             <ul class="chips">
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>Flutter</li>
+              <li>HTML</li><li>CSS</li><li>Flutter</li>
             </ul>
           </div>
-
           <div>
             <h3>Backend / Otros</h3>
             <ul class="chips">
-              <li>MySQL</li>
-              <li>Git / GitHub</li>
-              <li>Arduino</li>
+              <li>MySQL</li><li>Git / GitHub</li><li>Arduino</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INTERESES -->
+    <!-- INTERESES (ul) -->
     <section id="intereses" class="section">
       <div class="container">
         <h2>Intereses</h2>
@@ -120,7 +101,7 @@
       </div>
     </section>
 
-    <!-- IDIOMAS -->
+    <!-- IDIOMAS (ol) -->
     <section id="idiomas" class="section">
       <div class="container">
         <h2>Idiomas Hablados</h2>
@@ -131,66 +112,61 @@
       </div>
     </section>
 
-    <!-- PROYECTOS (Carrusel actualizado) -->
+    <!-- PROYECTOS (tarjetas sin JS) -->
     <section id="proyectos" class="section">
       <div class="container">
         <h2>Proyectos</h2>
 
-        <div class="carousel" data-index="0">
-          <button class="nav prev" aria-label="Proyecto anterior">‹</button>
-          <div class="track">
-            <!-- Slide 1 -->
-            <article class="slide">
-              <img src="https://placehold.co/1000x450/1b1b20/fffffe?text=PulseraApp+%7C+Flutter+%2B+ESP32"
-                alt="PulseraApp">
-              <div class="slide-body">
-                <h3>📱 PulseraApp</h3>
-                <p>Aplicación Flutter/Dart conectada a una ESP32 vía Bluetooth para medir el ritmo cardíaco en tiempo
-                  real.</p>
-                <p class="tec"><strong>Tecnologías:</strong> Flutter, Dart, Arduino, ESP32</p>
-                <a href="https://github.com/CrisPih/PulseraApp" target="_blank" rel="noopener">Ver repositorio</a>
-              </div>
-            </article>
+        <div class="cards">
+          <!-- PulseraApp -->
+          <article class="card">
+            <header class="card-head">
+              <span class="chip-app">Aplicación</span>
+              <h3>Administrador de inventario</h3>
+            </header>
+            <figure class="card-media">
+              <img src="https://placehold.co/900x480/1b6b75/fffffe?text=PulseraApp+%7C+Flutter+%2B+ESP32" alt="PulseraApp">
+            </figure>
+            <footer class="card-foot">Desarrollado en Flutter/Dart + ESP32</footer>
+          </article>
 
-            <!-- Slide 2 -->
-            <article class="slide">
-              <img src="https://placehold.co/1000x450/1b1b20/fffffe?text=TicTacToe+%7C+Java" alt="TicTacToe">
-              <div class="slide-body">
-                <h3>🎮 TicTacToe</h3>
-                <p>Juego de Tres en Raya con modo para un jugador, usando un algoritmo que optimiza las jugadas de la
-                  máquina.</p>
-                <p class="tec"><strong>Tecnologías:</strong> Java, estructuras de datos, algoritmos de búsqueda</p>
-                <a href="https://github.com/Sebhvarg/TicTacToe" target="_blank" rel="noopener">Ver repositorio</a>
-              </div>
-            </article>
+          <!-- Contactos -->
+          <article class="card">
+            <header class="card-head">
+              <span class="chip-app">Aplicación</span>
+              <h3>Administrador de contactos</h3>
+            </header>
+            <figure class="card-media">
+              <img src="https://placehold.co/900x480/3f8d95/fffffe?text=Contact+Manager+%7C+Java" alt="Contact Manager">
+            </figure>
+            <footer class="card-foot">Desarrollado en Java</footer>
+          </article>
 
-            <!-- Slide 3 -->
-            <article class="slide">
-              <img src="https://placehold.co/1000x450/1b1b20/fffffe?text=Hotel+Puerto+Cayo+%7C+Python+%2B+MySQL"
-                alt="Hotel Puerto Cayo">
-              <div class="slide-body">
-                <h3>🏨 Hotel Puerto Cayo</h3>
-                <p>Sistema de gestión de reservas y clientes para un hotel, con módulos de registro, consulta y
-                  facturación.</p>
-                <p class="tec"><strong>Tecnologías:</strong> Python, MySQL, CSS</p>
-                <a href="https://github.com/gasaesco/HotelPuertoCayo" target="_blank" rel="noopener">Ver repositorio</a>
-              </div>
-            </article>
-          </div>
-          <button class="nav next" aria-label="Proyecto siguiente">›</button>
+          <!-- TicTacToe -->
+          <article class="card">
+            <header class="card-head">
+              <span class="chip-app">Aplicación</span>
+              <h3>Juego Tic Tac Toe</h3>
+            </header>
+            <figure class="card-media">
+              <img src="https://placehold.co/900x480/7ea56a/0f172a?text=TicTacToe+%7C+Java" alt="TicTacToe">
+            </figure>
+            <footer class="card-foot">Desarrollado en Java</footer>
+          </article>
         </div>
       </div>
     </section>
 
-    <!-- MULTIMEDIA -->
+    <!-- MULTIMEDIA (solo video) -->
     <section id="multimedia" class="section">
       <div class="container">
         <h2>Multimedia</h2>
         <div class="media">
-          <iframe src="https://www.youtube.com/embed/-ejQoQq4TI8" title="Video de presentación"
+          <iframe
+            src="https://www.youtube.com/embed/-ejQoQq4TI8"
+            title="Video de presentación"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen>
-          </iframe>
+            allowfullscreen></iframe>
         </div>
       </div>
     </section>
@@ -206,7 +182,7 @@
       </div>
     </section>
 
-    <!-- CONTACTO -->
+    <!-- CONTACTO (form) -->
     <section id="contacto" class="section">
       <div class="container">
         <h2>Contacto</h2>
@@ -251,36 +227,22 @@
     </section>
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER con badges -->
   <footer class="site-footer">
-    <div class="container">
+    <div class="container footer-inner">
+      <div class="badges">
+        <a href="https://www.linkedin.com/in/cristina-pihuave-0ab060278" target="_blank" rel="noopener">
+          <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+        </a>
+        <a href="mailto:cristinapihuave810@gmail.com">
+          <img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+        </a>
+        <a href="https://github.com/CrisPih" target="_blank" rel="noopener">
+          <img alt="GitHub" src="https://img.shields.io/badge/GitHub-16161a?style=for-the-badge&logo=github&logoColor=white">
+        </a>
+      </div>
       <p>© 2025 Cristina Pihuave</p>
     </div>
   </footer>
-
-  <!-- Carrusel JS -->
-  <script>
-    const carousels = document.querySelectorAll('.carousel');
-    carousels.forEach(c => {
-      const track = c.querySelector('.track');
-      const slides = c.querySelectorAll('.slide');
-      const prev = c.querySelector('.prev');
-      const next = c.querySelector('.next');
-      let i = 0;
-      const update = () => track.style.transform = `translateX(-${i * 100}%)`;
-      prev.addEventListener('click', () => { i = (i - 1 + slides.length) % slides.length; update(); });
-      next.addEventListener('click', () => { i = (i + 1) % slides.length; update(); });
-
-      // swipe móvil
-      let startX = 0;
-      track.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-      track.addEventListener('touchend', e => {
-        const dx = e.changedTouches[0].clientX - startX;
-        if (dx > 40) prev.click();
-        if (dx < -40) next.click();
-      });
-    });
-  </script>
 </body>
-
 </html>
