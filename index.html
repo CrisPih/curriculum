@@ -10,14 +10,14 @@
   <meta name="author" content="Cristina Pihuave" />
   <title>CV – Cristina Pihuave</title>
 
-  <!-- Fuentes: retro para títulos + legible para texto -->
+  <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:wght@400;600;700&display=swap"
     rel="stylesheet">
 
-  <!-- Hoja de estilos (carpeta stylesheets) -->
+  <!-- CSS -->
   <link rel="stylesheet" href="stylesheets/styles.css" />
 </head>
 
@@ -106,7 +106,7 @@
       </div>
     </section>
 
-    <!-- INTERESES (ul) -->
+    <!-- INTERESES -->
     <section id="intereses" class="section">
       <div class="container">
         <h2>Intereses</h2>
@@ -120,7 +120,7 @@
       </div>
     </section>
 
-    <!-- IDIOMAS (ol) -->
+    <!-- IDIOMAS -->
     <section id="idiomas" class="section">
       <div class="container">
         <h2>Idiomas Hablados</h2>
@@ -131,44 +131,7 @@
       </div>
     </section>
 
-    <!-- PROYECTOS (carrusel) -->
-    <section id="proyectos" class="section">
-      <div class="container">
-        <h2>Proyectos</h2>
-        <div class="carousel" data-index="0">
-          <button class="nav prev" aria-label="Anterior">‹</button>
-          <div class="track">
-            <article class="slide">
-              <img src="https://placehold.co/1000x450?text=HeartGuard+ESP32" alt="HeartGuard">
-              <div class="slide-body">
-                <h3>HeartGuard (ESP32 + Flutter)</h3>
-                <p>Wearable con ESP32 y app Flutter para monitoreo de ritmo cardíaco y alertas.</p>
-                <a href="#" target="_blank" rel="noopener">Ver repositorio</a>
-              </div>
-            </article>
-            <article class="slide">
-              <img src="https://placehold.co/1000x450?text=Ponte+Pilas+GYE" alt="Ponte Pilas GYE">
-              <div class="slide-body">
-                <h3>Ponte Pilas GYE</h3>
-                <p>Juego de mesa para reconectar a jóvenes con sitios culturales de Guayaquil.</p>
-                <a href="#" target="_blank" rel="noopener">Más info</a>
-              </div>
-            </article>
-            <article class="slide">
-              <img src="https://placehold.co/1000x450?text=MovieLens+Recommender" alt="Movie Recommender">
-              <div class="slide-body">
-                <h3>Sistema Recomendador (MovieLens)</h3>
-                <p>Filtrado colaborativo con métricas de similitud y top-N recomendaciones.</p>
-                <a href="#" target="_blank" rel="noopener">Ver código</a>
-              </div>
-            </article>
-          </div>
-          <button class="nav next" aria-label="Siguiente">›</button>
-        </div>
-      </div>
-    </section>
-
-    <!-- PROYECTOS (CARRUSEL) -->
+    <!-- PROYECTOS (Carrusel actualizado) -->
     <section id="proyectos" class="section">
       <div class="container">
         <h2>Proyectos</h2>
@@ -176,45 +139,39 @@
         <div class="carousel" data-index="0">
           <button class="nav prev" aria-label="Proyecto anterior">‹</button>
           <div class="track">
-            <!-- Slide 1: PulseraApp -->
+            <!-- Slide 1 -->
             <article class="slide">
               <img src="https://placehold.co/1000x450/1b1b20/fffffe?text=PulseraApp+%7C+Flutter+%2B+ESP32"
                 alt="PulseraApp">
               <div class="slide-body">
-                <h3> PulseraApp</h3>
-                <p>
-                  Aplicación móvil en Flutter y Dart conectada por Bluetooth a una ESP32.
-                  Simula una pulsera inteligente que registra y muestra en tiempo real los latidos del corazón.
-                </p>
+                <h3>📱 PulseraApp</h3>
+                <p>Aplicación Flutter/Dart conectada a una ESP32 vía Bluetooth para medir el ritmo cardíaco en tiempo
+                  real.</p>
                 <p class="tec"><strong>Tecnologías:</strong> Flutter, Dart, Arduino, ESP32</p>
                 <a href="https://github.com/CrisPih/PulseraApp" target="_blank" rel="noopener">Ver repositorio</a>
               </div>
             </article>
 
-            <!-- Slide 2: TicTacToe -->
+            <!-- Slide 2 -->
             <article class="slide">
               <img src="https://placehold.co/1000x450/1b1b20/fffffe?text=TicTacToe+%7C+Java" alt="TicTacToe">
               <div class="slide-body">
-                <h3> TicTacToe</h3>
-                <p>
-                  Juego de Tres en Raya con modo para un jugador contra la máquina,
-                  implementando un algoritmo de decisión que optimiza jugadas.
-                </p>
+                <h3>🎮 TicTacToe</h3>
+                <p>Juego de Tres en Raya con modo para un jugador, usando un algoritmo que optimiza las jugadas de la
+                  máquina.</p>
                 <p class="tec"><strong>Tecnologías:</strong> Java, estructuras de datos, algoritmos de búsqueda</p>
                 <a href="https://github.com/Sebhvarg/TicTacToe" target="_blank" rel="noopener">Ver repositorio</a>
               </div>
             </article>
 
-            <!-- Slide 3: Hotel Puerto Cayo -->
+            <!-- Slide 3 -->
             <article class="slide">
               <img src="https://placehold.co/1000x450/1b1b20/fffffe?text=Hotel+Puerto+Cayo+%7C+Python+%2B+MySQL"
                 alt="Hotel Puerto Cayo">
               <div class="slide-body">
-                <h3> Hotel Puerto Cayo</h3>
-                <p>
-                  Sistema de gestión de clientes y reservas para hotel: registro, consultas y facturación,
-                  usando bases de datos relacionales.
-                </p>
+                <h3>🏨 Hotel Puerto Cayo</h3>
+                <p>Sistema de gestión de reservas y clientes para un hotel, con módulos de registro, consulta y
+                  facturación.</p>
                 <p class="tec"><strong>Tecnologías:</strong> Python, MySQL, CSS</p>
                 <a href="https://github.com/gasaesco/HotelPuertoCayo" target="_blank" rel="noopener">Ver repositorio</a>
               </div>
@@ -225,7 +182,18 @@
       </div>
     </section>
 
-
+    <!-- MULTIMEDIA -->
+    <section id="multimedia" class="section">
+      <div class="container">
+        <h2>Multimedia</h2>
+        <div class="media">
+          <iframe src="https://www.youtube.com/embed/-ejQoQq4TI8" title="Video de presentación"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen>
+          </iframe>
+        </div>
+      </div>
+    </section>
 
     <!-- MAPA -->
     <section id="ubicacion" class="section">
@@ -290,7 +258,7 @@
     </div>
   </footer>
 
-  <!-- Carrusel JS mínimo -->
+  <!-- Carrusel JS -->
   <script>
     const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(c => {
