@@ -1,4 +1,4 @@
-/* ========== Reset + Tipografía base (selector universal) ========== */
+/* ========== Reset + tipografía base (selector universal) ========== */
 *{
   box-sizing: border-box;
   margin: 0;
@@ -6,25 +6,38 @@
   font-family: "Source Sans Pro", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 html, body{ height: 100%; }
-body{
-  background:#0d0f15; color:#e6e6e6; line-height:1.6;
-}
 
-/* ========== Tokens de color ========== */
+/* ========== Paleta (Happy Hues) ========== */
 :root{
-  --bg:#0d0f15;
-  --panel:#141826;
-  --text:#e6e6e6;
-  --muted:#bdbdbd;
-  --c1:#6c63ff;  /* morado retro */
-  --c2:#00d4ff;  /* cian retro  */
-  --link:#00f2ff;
+  --bg: #16161a;        /* Background */
+  --headline: #fffffe;  /* Headline/Main */
+  --paragraph: #94a1b2; /* Paragraph */
+  --button: #7f5af0;    /* Button/Highlight */
+  --button-text: #fffffe;
+  --stroke: #010101;    /* Stroke */
+  --secondary: #72757e; /* Secondary */
+  --tertiary: #2cb67d;  /* Tertiary (accent) */
+
+  /* Derivados para UI */
+  --panel: #1b1b20;                 /* panel sutil sobre bg */
+  --panel-2: #1f2026;
+  --link: var(--button);            /* enlaces en color highlight */
+  --chip-bg: #202128;
+  --chip-bd: #2a2b34;
+  --bd-soft: #23242b;
+  --shadow: 0 0 20px rgba(127, 90, 240, .12);
 }
 
-/* ========== Header con look retro ========== */
+body{
+  background: var(--bg);
+  color: var(--paragraph);
+  line-height: 1.6;
+}
+
+/* ========== Header retro-pro ========== */
 .site-header{
-  background: linear-gradient(90deg, var(--c1), var(--c2));
-  color:#000;
+  background: linear-gradient(90deg, var(--button), var(--tertiary));
+  color: #0a0a0a;
 }
 .container{ width:min(1100px, 90%); margin-inline:auto; }
 .header-inner{ display:flex; gap:1.5rem; align-items:center; padding:2.5rem 0 1.5rem; }
@@ -35,78 +48,86 @@ body{
 h1{
   font-family:"Press Start 2P", monospace;
   font-size:clamp(1.6rem, 2.5vw, 2rem);
-  line-height:1.2; color:#06121a; margin-bottom:.35rem;
+  line-height:1.2; color:#081018; margin-bottom:.35rem; /* contraste en header */
 }
-.subtitle{ color:#06202a; font-weight:700; margin-bottom:.35rem; }
+.subtitle{ color:#0f2230; font-weight:700; margin-bottom:.35rem; }
 .contact{ list-style:none; display:flex; flex-wrap:wrap; gap:.75rem; }
-.contact a{ color:#06121a; text-decoration:none; border-bottom:1px solid #06121a55; }
-.contact a:hover{ border-bottom-color:#06121a; }
+.contact a{ color:#081018; text-decoration:none; border-bottom:1px solid #08101840; }
+.contact a:hover{ border-bottom-color:#081018; }
 
-/* ========== NAV: flex + sin viñetas (hijo inmediato nav > ul) ========== */
-nav{ background:#12141c; position:sticky; top:0; z-index:10; }
+/* ========== NAV (flex) ========== */
+nav{ background:#191a1f; position:sticky; top:0; z-index:10; border-bottom:1px solid var(--bd-soft); }
 nav > ul{
   display:flex; justify-content:center; align-items:center; gap:1rem;
   list-style:none; padding:.75rem 1rem;
 }
-nav a{ color:var(--text); text-decoration:none; font-weight:600; }
-nav a:hover{ color:var(--link); }
+nav a{ color:var(--headline); text-decoration:none; font-weight:600; }
+nav a:hover{ color:var(--button); }
 
-/* ========== Secciones apiladas ========= */
+/* ========== Secciones apiladas ========== */
 .section{ padding:4rem 0; }
 .section h2{
   font-family:"Press Start 2P", monospace;
-  color:var(--c2); text-transform:uppercase; letter-spacing:1px;
-  margin-bottom:1rem; font-size:clamp(1rem, 2vw, 1.1rem);
+  color: var(--headline);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+  font-size: clamp(1rem, 2vw, 1.1rem);
 }
-.section p{ color:var(--text); }
-
-/* ========== Info ========= */
+.section p{ color: var(--paragraph); }
 #info .container{ max-width:900px; }
 
-/* ========== Habilidades (grid) ========= */
+/* ========== Imagen con id (rúbrica Regla II) ========== */
+#photo{
+  width: 8vw;     /* pedido */
+  height: auto;   /* pedido */
+  border-radius: 50%;
+  border: 2px solid #0d0d0d55;
+}
+
+/* ========== Habilidades (grid) ========== */
 .skills{
   display:grid; gap:1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   margin-top:.5rem;
 }
-.skills h3{ color:#b5b5b5; margin-bottom:.35rem; font-weight:700; }
+.skills h3{ color: var(--headline); margin-bottom:.35rem; font-weight:700; }
 .chips{ list-style:none; display:flex; flex-wrap:wrap; gap:.5rem; }
 .chips li{
-  background:#161922; border:1px solid #1f2540;
-  padding:.5rem .7rem; border-radius:999px; font-weight:600;
+  background: var(--chip-bg);
+  border: 1px solid var(--chip-bd);
+  color: var(--headline);
+  padding: .5rem .7rem;
+  border-radius: 999px;
+  font-weight: 600;
 }
 
-/* ========== Intereses (ul) ========= */
-#intereses{
-  background: linear-gradient(180deg, #0e111d, #10131f);
-}
+/* ========== Intereses (ul) ========== */
+#intereses{ background: var(--panel); border-top:1px solid var(--bd-soft); }
 .lista-intereses{
   list-style: disc;
   padding-left: 2rem;
   line-height: 1.8;
-  color:#d8d8d8;
+  color: var(--paragraph);
 }
-.lista-intereses li::marker{ color: var(--c2); }
+.lista-intereses li::marker{ color: var(--button); }
 
-/* ========== Idiomas (ol) ========= */
-#idiomas{
-  background:#0c0f19;
-  border-top:1px solid #1d2236;
-}
+/* ========== Idiomas (ol) ========== */
+#idiomas{ background: var(--panel-2); border-top:1px solid var(--bd-soft); }
 .lista-idiomas{
   list-style: decimal;
   padding-left: 2rem;
   line-height: 1.8;
-  color:#d8d8d8;
+  color: var(--paragraph);
 }
-.lista-idiomas li::marker{ color: var(--c1); font-weight:700; }
+.lista-idiomas li::marker{ color: var(--tertiary); font-weight:700; }
 
-/* ========== Proyectos – Carrusel ========= */
+/* ========== Proyectos – Carrusel ========== */
 #proyectos .container{ max-width:1000px; }
 .carousel{
   position:relative; overflow:hidden; border-radius:1rem;
-  background:linear-gradient(180deg, #111522, #0e1220);
-  padding:1rem;
+  background: linear-gradient(180deg, #14151b, #11131a);
+  padding:1rem; border:1px solid var(--bd-soft);
 }
 .carousel .track{
   display:flex; transition:transform .4s ease; will-change:transform;
@@ -117,63 +138,72 @@ nav a:hover{ color:var(--link); }
   align-items:start; justify-items:center;
 }
 .carousel .slide img{
-  width:100%; height:auto; border-radius:.75rem; border:1px solid #1f2745;
+  width:100%; height:auto; border-radius:.75rem; border:1px solid var(--bd-soft);
+  box-shadow: var(--shadow);
 }
 .slide-body{ width:100%; padding:.5rem 0 0; }
-.slide-body h3{ color:var(--link); margin-bottom:.25rem; }
-.slide-body p{ color:#cfd5ff; margin-bottom:.35rem; }
-.slide-body a{ color:var(--link); text-decoration:none; border-bottom:1px solid #00f2ff33; }
-.slide-body a:hover{ border-bottom-color:var(--link); }
+.slide-body h3{ color: var(--headline); margin-bottom:.25rem; }
+.slide-body p{ color: var(--paragraph); margin-bottom:.35rem; }
+.slide-body a{
+  color: var(--link); text-decoration:none; border-bottom:1px solid #7f5af055;
+}
+.slide-body a:hover{ border-bottom-color: var(--link); }
 
 /* Botones prev/next */
 .carousel .nav{
   position:absolute; top:50%; transform:translateY(-50%);
   width:42px; height:42px; border-radius:50%;
-  border:1px solid #2a3358; background:#0b0f1d;
-  color:#e6e6e6; cursor:pointer; font-size:1.4rem; line-height:1;
+  border:1px solid var(--bd-soft); background:#0f1117;
+  color: var(--headline); cursor:pointer; font-size:1.4rem; line-height:1;
   display:grid; place-items:center; transition:.2s;
 }
-.carousel .nav:hover{ background:#121833; }
+.carousel .nav:hover{ background:#151826; color: var(--button); }
 .carousel .prev{ left:8px; }
 .carousel .next{ right:8px; }
 
-/* ========== Multimedia ========= */
+/* ========== Multimedia ========== */
 .media{ margin-top:.9rem; }
 .media img{ display:block; width:100%; height:auto; border-radius:.75rem; }
 .media iframe{ width:100%; aspect-ratio:16/9; border:none; border-radius:.75rem; }
 
-/* ========== Mapa ========= */
+/* ========== Mapa ========== */
 .map-wrap{ margin-top:.75rem; }
 #ubicacion iframe{
   width:100%; aspect-ratio:16/9; border:none; border-radius:.75rem;
-  box-shadow: 0 0 20px rgba(0, 212, 255, .12);
+  box-shadow: 0 0 20px rgba(127, 90, 240, .12);
 }
 
-/* ========== Formulario (grid) ========= */
+/* ========== Formulario (grid) ========== */
 .form{ display:grid; gap:1rem; max-width:900px; }
 .grid-2{ display:grid; gap:1rem; grid-template-columns:repeat(auto-fit, minmax(240px, 1fr)); }
-label{ display:grid; gap:.35rem; color:#b5b5b5; }
+label{ display:grid; gap:.35rem; color: var(--secondary); }
 input, select, textarea, .btn{
-  background:#1a1f2d; color:var(--text); border:1px solid #2a2f42;
+  background:#1f2330; color: var(--headline); border:1px solid var(--bd-soft);
   border-radius:.6rem; padding:.8rem;
 }
 textarea{ resize:vertical; }
 .inline{
   display:flex; flex-wrap:wrap; gap:.75rem;
-  border:1px solid #2a2f42; padding:.6rem .8rem; border-radius:.6rem;
+  border:1px solid var(--bd-soft); padding:.6rem .8rem; border-radius:.6rem;
 }
-.inline legend{ padding:0 .4rem; color:#9aa4c6; }
+.inline legend{ padding:0 .4rem; color: var(--secondary); }
 .inline label{ display:flex; align-items:center; gap:.4rem; }
 .btn{
-  background:linear-gradient(180deg, var(--c2), #35e1ff);
-  color:#001016; font-weight:800; cursor:pointer; border:none;
+  background: var(--button);
+  color: var(--button-text);
+  font-weight: 800; cursor:pointer; border: none; padding: .9rem 1rem;
+  border-radius: .6rem;
 }
-.btn:hover{ filter:brightness(1.06); }
+.btn:hover{ filter: brightness(1.08); }
 
-/* ========== Footer: descendiente p (derecha + itálica) ========= */
-.site-footer{ background:#12141c; }
+/* ========== Links genéricos ========== */
+a{ color: var(--link); }
+a:hover{ color: #9a83ff; }
+
+/* ========== Footer (descendiente p: derecha + itálica) ========== */
+.site-footer{ background:#191a1f; border-top:1px solid var(--bd-soft); }
 .site-footer .container{ padding:1.25rem 0; }
 .site-footer .container p,
 footer p{
-  text-align:right; font-style:italic; color:#999;
+  text-align:right; font-style:italic; color: var(--secondary);
 }
