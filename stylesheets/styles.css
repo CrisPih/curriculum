@@ -48,9 +48,13 @@ body{
 .topnav ul{ display:flex; justify-content:center; align-items:center; gap:1rem; list-style:none; }
 .topnav a{
   color:#081018; font-weight:700; text-decoration:none; padding:.35rem .5rem;
-  border-radius:.35rem;
+  border-radius:.35rem; transition:background .2s, color .2s, box-shadow .2s;
 }
-.topnav a:hover{ background:#ffffff1a; }
+.topnav a:hover{
+  background:#ffffff;          /* fondo blanco */
+  color:#0a0a0a;               /* texto oscuro */
+  box-shadow:0 0 6px rgba(255,255,255,0.4);  /* efecto suave */
+}
 
 /* ========== Secciones ========== */
 .section{ padding:4.5rem 0; scroll-margin-top:72px; }
