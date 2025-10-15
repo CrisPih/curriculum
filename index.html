@@ -159,7 +159,7 @@
           <!-- TicTacToe -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=TicTacToe+%7C+Java" alt="TicTacToe">
+              <img src="tictactoe.png" alt="TicTacToe">
             </figure>
             <div class="project-body">
               <h3 class="project-title"> TicTacToe</h3>
@@ -176,8 +176,7 @@
           <!-- Hotel Puerto Cayo -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=Hotel+Puerto+Cayo+%7C+Python+%2B+MySQL"
-                alt="Hotel Puerto Cayo">
+              <img src="hotelcayo.png" alt="Hotel Puerto Cayo">
             </figure>
             <div class="project-body">
               <h3 class="project-title"> Hotel Puerto Cayo</h3>
@@ -222,11 +221,11 @@
     <!-- CONTACTO (form) -->
     <section id="contacto" class="section">
       <div class="container">
-        <h2>Contacto</h2>
+        <h2>Contactame</h2>
         <form class="form" action="#" method="post">
           <div class="grid-2">
-            <label>Nombre
-              <input type="text" name="nombre" placeholder="Tu nombre" required autocomplete="name">
+            <label>Nombre y Apellido
+              <input type="text" name="nombre" placeholder="Tu nombre y Apellido" required autocomplete="name">
             </label>
             <label>Asunto
               <select name="asunto" required>
@@ -238,21 +237,24 @@
             </label>
           </div>
 
+          <!-- Género: solo uno -->
           <fieldset class="inline">
             <legend>Género</legend>
-            <label><input type="radio" name="gen" value="femenino" required> Femenino</label>
-            <label><input type="radio" name="gen" value="masculino"> Masculino</label>
-            <label><input type="radio" name="gen" value="otro"> Otro</label>
+            <label><input type="radio" name="genero" value="Femenino"> Femenino</label>
+            <label><input type="radio" name="genero" value="Masculino"> Masculino</label>
+            <label><input type="radio" name="genero" value="Otro"> Otro</label>
           </fieldset>
 
-          <label>Intereses
-            <select name="intereses[]" multiple size="4">
-              <option>UI/UX</option>
-              <option>Inteligencia Artificial</option>
-              <option>Aplicaciones Móviles</option>
-              <option>Desarrollo Web</option>
-            </select>
-          </label>
+          <!-- Intereses: varios posibles -->
+          <fieldset class="inline">
+            <legend>Intereses</legend>
+            <label><input type="checkbox" name="intereses[]" value="UI/UX"> UI/UX</label>
+            <label><input type="checkbox" name="intereses[]" value="Inteligencia Artificial"> Inteligencia
+              Artificial</label>
+            <label><input type="checkbox" name="intereses[]" value="Aplicaciones Móviles"> Aplicaciones Móviles</label>
+            <label><input type="checkbox" name="intereses[]" value="Desarrollo Web"> Desarrollo Web</label>
+          </fieldset>
+
 
           <label>Mensaje
             <textarea name="mensaje" rows="6" placeholder="Escribe tu mensaje..." required></textarea>
