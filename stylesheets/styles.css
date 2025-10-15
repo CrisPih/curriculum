@@ -10,7 +10,7 @@ body {
   height: 100%;
 }
 
-/* ========== Paleta Happy Hues ========== */
+/* Paleta Happy Hues  */
 :root {
   --bg: #16161a;
   --headline: #fffffe;
@@ -37,13 +37,13 @@ body {
   line-height: 1.6;
 }
 
-/* ========== Contenedor base ========== */
+/*  Contenedor base  */
 .container {
   width: min(1100px, 90%);
   margin-inline: auto;
 }
 
-/* ========== NAV/HEADER degradado fijo ========== */
+/* NAV/HEADER */
 .topnav {
   position: sticky;
   top: 0;
@@ -77,7 +77,7 @@ body {
   background: #ffffff1a;
 }
 
-/* ========== Secciones ========== */
+/* Secciones */
 .section {
   padding: 4.5rem 0;
   scroll-margin-top: 72px;
@@ -92,7 +92,7 @@ body {
   font-size: clamp(1rem, 2vw, 1.1rem);
 }
 
-/* ========== INFO (foto + texto con panel) ========== */
+/* INFO */
 .about {
   display: grid;
   grid-template-columns: clamp(140px, 8vw, 240px) 1fr;
@@ -135,7 +135,7 @@ body {
   margin-top: .75rem;
 }
 
-/* ========== HABILIDADES ========== */
+/* HABILIDADES */
 .skills {
   display: grid;
   gap: 1.25rem 2rem;
@@ -172,7 +172,7 @@ body {
   color: var(--button-text);
 }
 
-/* — Divisores verticales en desktop — */
+/* Divisores verticales en desktop */
 .skill-col {
   padding: 0 1rem;
 }
@@ -195,7 +195,7 @@ body {
 }
 
 
-/* ===== Duo grid (Intereses + Idiomas) ===== */
+/*Duo grid (Intereses + Idiomas) */
 .duo-grid {
   display: grid;
   gap: 1.25rem;
@@ -245,7 +245,7 @@ body {
   font-weight: 700;
 }
 
-/* ========== PROYECTOS – Grid de tarjetas ========== */
+/* PROYECTOS – Grid de tarjetas */
 .projects-grid {
   margin-top: 1.25rem;
   display: grid;
@@ -317,7 +317,7 @@ body {
   transform: translateY(-1px);
 }
 
-/* ========== MULTIMEDIA ========== */
+/* MULTIMEDIA */
 .media {
   margin-top: .9rem;
 }
@@ -337,7 +337,7 @@ body {
   font-size: .95rem;
 }
 
-/* ========== MAPA ========== */
+/* MAPA  */
 .map-wrap {
   margin-top: .75rem;
 }
@@ -358,7 +358,7 @@ body {
   font-size: .95rem;
 }
 
-/* ========== FORMULARIO (grid) ========== */
+/* FORMULARIO (grid) */
 .form {
   display: grid;
   gap: 1rem;
@@ -429,8 +429,6 @@ textarea {
   transform: scale(1.03);
 }
 
-/* ===== Alinear formulario a la izquierda ===== */
-
 
 #contacto h2 {
   text-align: left;
@@ -447,8 +445,7 @@ textarea {
   margin: 0;
 }
 
-/* ===== Layout de Contacto con imagen ===== */
-/* ===== Layout de Contacto (form izq, imagen der) ===== */
+/* Layout de Contacto */
 #contacto .container.contacto-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.15fr) minmax(260px, 0.85fr);
@@ -458,7 +455,6 @@ textarea {
 
 .contacto-img {
   justify-self: end;
-  /* imagen pegada a la derecha */
   align-self: start;
 }
 
@@ -466,9 +462,7 @@ textarea {
   display: block;
   width: 100%;
   max-width: 400px;
-  /* no se desborda */
   height: auto;
-  /* mantiene proporción */
   border-radius: 12px;
   box-shadow: 0 0 20px rgba(127, 90, 240, 0.15);
   object-fit: cover;
@@ -492,7 +486,7 @@ textarea {
 }
 
 
-/* ========== LINKS ========== */
+/* LINKS */
 a {
   color: var(--link);
 }
@@ -501,7 +495,7 @@ a:hover {
   color: #ffffff;
 }
 
-/* ========== FOOTER ========== */
+/* FOOTER */
 .site-footer {
   background: #191a1f;
   border-top: 1px solid var(--bd-soft);
@@ -529,9 +523,8 @@ a:hover {
   font-style: italic;
 }
 
-/* ======== Reglas pedidas por la rúbrica (selectores) ======== */
+/* selectores */
 .topnav>.nav-inner>ul {
   list-style: none;
 }
 
-/* ID #photo con ancho 8vw (ya aplicado con clamp en #photo) */
