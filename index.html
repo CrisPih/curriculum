@@ -1,21 +1,26 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="keywords" content="Cristina Pihuave, CV, Computación, UI/UX, Programación" />
-  <meta name="description" content="Currículum vitae de Cristina Pihuave: habilidades, proyectos, intereses, idiomas, multimedia, mapa y contacto." />
+  <meta name="description"
+    content="Currículum vitae de Cristina Pihuave: habilidades, proyectos, intereses, idiomas, multimedia, mapa y contacto." />
   <meta name="author" content="Cristina Pihuave" />
   <title>CV – Cristina Pihuave</title>
 
   <!-- Fuentes -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:wght@400;600;700&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Source+Sans+Pro:wght@400;600;700&display=swap"
+    rel="stylesheet">
 
   <!-- CSS -->
   <link rel="stylesheet" href="stylesheets/styles.css" />
 </head>
+
 <body>
 
   <!-- HEADER + NAV (degradado fijo) -->
@@ -35,27 +40,29 @@
   </header>
 
   <main>
-    <!-- INFO (foto + nombre + texto) -->
+    <!-- INFO -->
     <section id="info" class="section">
       <div class="container about">
-        <img id="photo" src="https://placehold.co/240x240?text=FOTO" alt="Foto de Cristina Pihuave" />
+        <img id="photo" src="Screenshot_20251001_142122_Gallery.jpg" alt="Foto de Cristina Pihuave" />
 
         <div class="about-text">
           <h1>Cristina Pihuave</h1>
           <p class="subtitle">Estudiante de Ciencias de la Computación</p>
 
-          <p>
-            Soy desarrolladora en formación con enfoque en <strong>UX/UI</strong>, 
-            <strong>Inteligencia Artificial</strong> aplicada y <strong>Desarrollo Móvil</strong>.
-            Disfruto crear experiencias claras, accesibles y de alta calidad,
-            priorizando arquitectura limpia, pruebas y diseño centrado en las personas.
-          </p>
-          <p>
-            He trabajado en proyectos que combinan <em>hardware</em> y <em>software</em> (ESP32 + Flutter),
-            juegos con algoritmos de decisión y sistemas de gestión con bases de datos.
-            Me motiva colaborar en equipos donde pueda aportar técnica, diseño y comunicación.
-            Más proyectos en <a href="https://github.com/CrisPih" target="_blank" rel="noopener">mi GitHub</a>.
-          </p>
+          <div class="about-panel">
+            <p>
+              Soy desarrolladora en formación con enfoque en <strong>UX/UI</strong>,
+              <strong>Inteligencia Artificial</strong> aplicada y <strong>Desarrollo Móvil</strong>.
+              Disfruto crear experiencias claras, accesibles y de alta calidad,
+              priorizando arquitectura limpia, pruebas y diseño centrado en las personas.
+            </p>
+            <p>
+              He trabajado en proyectos que combinan hardware y software, juegos con algoritmos de decisión y sistemas
+              de gestión con bases de datos. Me motiva colaborar en equipos donde pueda aportar técnica, diseño y
+              comunicación. Más proyectos en <a href="https://github.com/CrisPih" target="_blank" rel="noopener">mi
+                página de GitHub</a>.
+            </p>
+          </div>
         </div>
       </div>
     </section>
@@ -64,51 +71,64 @@
     <section id="habilidades" class="section">
       <div class="container">
         <h2>Habilidades</h2>
+
         <div class="skills">
-          <div>
+          <div class="skill-col">
             <h3>Lenguajes</h3>
             <ul class="chips">
-              <li>Python</li><li>Java</li><li>Dart</li>
+              <li>Python</li>
+              <li>Java</li>
+              <li>Dart</li>
             </ul>
           </div>
-          <div>
+
+          <div class="skill-col">
             <h3>Frontend</h3>
             <ul class="chips">
-              <li>HTML</li><li>CSS</li><li>Flutter</li>
+              <li>HTML</li>
+              <li>CSS</li>
+              <li>Flutter</li>
             </ul>
           </div>
-          <div>
+
+          <div class="skill-col">
             <h3>Backend / Otros</h3>
             <ul class="chips">
-              <li>MySQL</li><li>Git / GitHub</li><li>Arduino</li>
+              <li>MySQL</li>
+              <li>Git / GitHub</li>
+              <li>Arduino</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INTERESES (ul) -->
-    <section id="intereses" class="section">
-      <div class="container">
-        <h2>Intereses</h2>
-        <ul class="lista-intereses">
-          <li>Diseño de experiencia de usuario (UX/UI)</li>
-          <li>Inteligencia Artificial aplicada</li>
-          <li>Aplicaciones móviles</li>
-          <li>Desarrollo Web y accesibilidad</li>
-          <li>Prototipado e innovación</li>
-        </ul>
-      </div>
-    </section>
 
-    <!-- IDIOMAS (ol) -->
-    <section id="idiomas" class="section">
-      <div class="container">
-        <h2>Idiomas Hablados</h2>
-        <ol class="lista-idiomas">
-          <li>Español — Nativo</li>
-          <li>Inglés — Intermedio avanzado (B2)</li>
-        </ol>
+    <!-- INTERESES + IDIOMAS (lado a lado, tonos alternados) -->
+    <section class="section">
+      <div class="container duo-grid">
+        <!-- Intereses -->
+        <section id="intereses" class="tone tone-1">
+          <h2>Intereses</h2>
+          <ul class="lista-intereses">
+            <li>Diseño de experiencia de usuario (UX/UI)</li>
+            <li>Inteligencia Artificial aplicada</li>
+            <li>Aplicaciones móviles</li>
+            <li>Desarrollo Web y accesibilidad</li>
+            <li>Prototipado e innovación</li>
+          </ul>
+        </section>
+
+        <!-- Idiomas -->
+        <section id="idiomas" class="tone tone-2">
+          <h2>Idiomas Hablados</h2>
+          <ol class="lista-idiomas">
+            <li>Español — Nativo</li>
+            <li>Inglés — Avanzado (C1)</li>
+            <li>Portugués — Básico (A1)</li>
+            <li>Italiano — Básico (A1)</li>
+          </ol>
+        </section>
       </div>
     </section>
 
@@ -121,15 +141,18 @@
           <!-- PulseraApp -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=PulseraApp+%7C+Flutter+%2B+ESP32" alt="PulseraApp">
+              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=PulseraApp+%7C+Flutter+%2B+ESP32"
+                alt="PulseraApp">
             </figure>
             <div class="project-body">
-              <h3 class="project-title">📱 PulseraApp</h3>
+              <h3 class="project-title"> PulseraApp</h3>
               <p class="project-desc">
-                App Flutter/Dart conectada por Bluetooth a una ESP32 para registrar y mostrar el ritmo cardíaco en tiempo real.
+                App de android conectada por Bluetooth a una ESP32 para registrar y mostrar el ritmo cardíaco en
+                tiempo real.
               </p>
               <p class="project-tech"><strong>Tecnologías:</strong> Flutter, Dart, Arduino, ESP32</p>
-              <a class="project-link" href="https://github.com/CrisPih/PulseraApp" target="_blank" rel="noopener">Ver repositorio</a>
+              <a class="project-link" href="https://github.com/CrisPih/PulseraApp" target="_blank" rel="noopener">Ver
+                repositorio</a>
             </div>
           </article>
 
@@ -139,27 +162,31 @@
               <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=TicTacToe+%7C+Java" alt="TicTacToe">
             </figure>
             <div class="project-body">
-              <h3 class="project-title">🎮 TicTacToe</h3>
+              <h3 class="project-title"> TicTacToe</h3>
               <p class="project-desc">
                 Tres en raya con modo 1 jugador y algoritmo de decisión que optimiza jugadas de la máquina.
               </p>
-              <p class="project-tech"><strong>Tecnologías:</strong> Java, estructuras de datos, algoritmos de búsqueda</p>
-              <a class="project-link" href="https://github.com/Sebhvarg/TicTacToe" target="_blank" rel="noopener">Ver repositorio</a>
+              <p class="project-tech"><strong>Tecnologías:</strong> Java, estructuras de datos, algoritmos de búsqueda
+              </p>
+              <a class="project-link" href="https://github.com/Sebhvarg/TicTacToe" target="_blank" rel="noopener">Ver
+                repositorio</a>
             </div>
           </article>
 
           <!-- Hotel Puerto Cayo -->
           <article class="project-card">
             <figure class="project-media">
-              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=Hotel+Puerto+Cayo+%7C+Python+%2B+MySQL" alt="Hotel Puerto Cayo">
+              <img src="https://placehold.co/1000x560/1b1b20/fffffe?text=Hotel+Puerto+Cayo+%7C+Python+%2B+MySQL"
+                alt="Hotel Puerto Cayo">
             </figure>
             <div class="project-body">
-              <h3 class="project-title">🏨 Hotel Puerto Cayo</h3>
+              <h3 class="project-title"> Hotel Puerto Cayo</h3>
               <p class="project-desc">
                 Sistema de gestión de clientes y reservas con módulos de registro, consulta y facturación.
               </p>
               <p class="project-tech"><strong>Tecnologías:</strong> Python, MySQL, CSS</p>
-              <a class="project-link" href="https://github.com/gasaesco/HotelPuertoCayo" target="_blank" rel="noopener">Ver repositorio</a>
+              <a class="project-link" href="https://github.com/gasaesco/HotelPuertoCayo" target="_blank"
+                rel="noopener">Ver repositorio</a>
             </div>
           </article>
         </div>
@@ -171,12 +198,11 @@
       <div class="container">
         <h2>Multimedia</h2>
         <div class="media">
-          <iframe
-            src="https://www.youtube.com/embed/-ejQoQq4TI8"
-            title="Video de presentación"
+          <iframe src="https://www.youtube.com/embed/-ejQoQq4TI8" title="Video de presentación"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
             allowfullscreen></iframe>
         </div>
+        <p class="media-note">Espero podamos hacer grandes proyectos junto a su empresa.</p>
       </div>
     </section>
 
@@ -185,9 +211,11 @@
       <div class="container">
         <h2>Ubicación</h2>
         <div class="map-wrap">
-          <iframe title="Mapa Guayaquil" src="https://www.google.com/maps?q=Guayaquil,Ecuador&output=embed"
+          <iframe title="Mapa FIEC ESPOL"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3987.0234368411516!2d-79.96960647523119!3d-2.1447085371664327!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x902d7302301cbb53%3A0x7f47381634200fe2!2sAsociaci%C3%B3n%20de%20Estudiantes%20de%20la%20FIEC%20-%20ESPOL!5e0!3m2!1ses-419!2sec!4v1760502283053!5m2!1ses-419!2sec"
             loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
+        <p class="map-note">Me puedes encontrar por <strong>FIEC</strong> en <strong>ESPOL</strong>.</p>
       </div>
     </section>
 
@@ -241,17 +269,21 @@
     <div class="container footer-inner">
       <div class="badges">
         <a href="https://www.linkedin.com/in/cristina-pihuave-0ab060278" target="_blank" rel="noopener">
-          <img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
+          <img alt="LinkedIn"
+            src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white">
         </a>
         <a href="mailto:cristinapihuave810@gmail.com">
-          <img alt="Gmail" src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
+          <img alt="Gmail"
+            src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white">
         </a>
         <a href="https://github.com/CrisPih" target="_blank" rel="noopener">
-          <img alt="GitHub" src="https://img.shields.io/badge/GitHub-16161a?style=for-the-badge&logo=github&logoColor=white">
+          <img alt="GitHub"
+            src="https://img.shields.io/badge/GitHub-16161a?style=for-the-badge&logo=github&logoColor=white">
         </a>
       </div>
       <p>© 2025 Cristina Pihuave</p>
     </div>
   </footer>
 </body>
+
 </html>
